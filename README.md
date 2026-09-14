@@ -8,7 +8,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Dialect-T--SQL%20%2F%20SQL%20Server-red?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" alt="SQL Server">
-  <img src="https://img.shields.io/badge/Progress-11%20%2F%2050%20LeetCode-blue?style=for-the-badge&logo=leetcode&logoColor=white" alt="Progress">
+  <img src="https://img.shields.io/badge/Progress-12%20%2F%2050%20LeetCode-blue?style=for-the-badge&logo=leetcode&logoColor=white" alt="Progress">
   <img src="https://img.shields.io/badge/Status-Active%20Workspace-success?style=for-the-badge" alt="Status">
 </p>
 
@@ -59,6 +59,7 @@ Files are organized using clear, predictable prefixes:
 | **LEET-09** | Rising Temperature                                   | Self Joins & Date Functions            |   🟢 Easy  | [`View Code`](LEET-09-rising-temperature.sql)                                   |
 | **LEET-10** | Average Time of Process per Machine                  | Self Joins & Aggregations              |  🟡 Medium | [`View Code`](LEET-10-average-time-of-process-per-machine.sql)                  |
 | **LEET-11** | Students and Examinations                            | Cross Joins, Left Joins & Aggregations |   🟢 Easy  | [`View Code`](LEET-11-students-and-examinations.sql)                            |
+| **LEET-12** | Managers with at Least 5 Direct Reports              | Self Joins & Aggregations              |  🟡 Medium | [`View Code`](LEET-12-managers-with-at-least-5-direct-reports.sql)              |
 
 ---
 
