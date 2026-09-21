@@ -14,8 +14,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/SQL%20Server-T--SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server">
-  <img src="https://img.shields.io/badge/LeetCode%2050-17%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
-  <img src="https://img.shields.io/badge/Progress-34%25-0ea5e9?style=for-the-badge" alt="Progress">
+  <img src="https://img.shields.io/badge/LeetCode%2050-18%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
+  <img src="https://img.shields.io/badge/Progress-36%25-0ea5e9?style=for-the-badge" alt="Progress">
   <img src="https://img.shields.io/badge/Status-Active-22c55e?style=for-the-badge" alt="Status">
 </p>
 
@@ -104,7 +104,8 @@ SQL-for-Data-Engineering-Lab/
 ├── LEET-03-big-countries.sql
 ├── ...
 ├── LEET-16-average-selling-price.sql
-└── LEET-17-project-employees-i.sql
+├── LEET-17-project-employees-i.sql
+└── LEET-18-percentage-of-users-attended-a-contest.sql
 ```
 
 ### 🏷️ Naming Convention
@@ -121,9 +122,9 @@ Each LeetCode problem is stored as an independent SQL file.
 
 ### Current Progress
 
-**17 / 50 Problems Completed — 34%**
+**18 / 50 Problems Completed — 36%**
 
-`█████████████████░░░░░░░░░░░░░░░░░░░`
+`██████████████████░░░░░░░░░░░░░░░░`
 
 |  # | Problem                                        | Core Concepts                         | Difficulty |                                                                       Solution |
 | -: | ---------------------------------------------- | ------------------------------------- | :--------: | -----------------------------------------------------------------------------: |
@@ -143,8 +144,9 @@ Each LeetCode problem is stored as an independent SQL file.
 | 15 | **Not Boring Movies**                          | Modulo & Sorting                      |   🟢 Easy  |                                    [View SQL](./LEET-15-not-boring-movies.sql) |
 | 16 | **Average Selling Price**                      | JOINs, Date Ranges & NULL Handling    |   🟢 Easy  |                                [View SQL](./LEET-16-average-selling-price.sql) |
 | 17 | **Project Employees I**                        | JOINs, Aggregation & `AVG()`          |   🟢 Easy  |                                  [View SQL](./LEET-17-project-employees-i.sql) |
+| 18 | **Percentage of Users Attended a Contest**     | Aggregation, Subquery & `ROUND()`     |   🟢 Easy  |               [View SQL](./LEET-18-percentage-of-users-attended-a-contest.sql) |
 
-> **17 / 50 • 34% Complete**
+> **18 / 50 • 36% Complete**
 
 ---
 
@@ -234,6 +236,6 @@ This approach is designed to build SQL skills that can transfer directly into **
 
 ## ⚡ Building SQL Skills for Real Data Engineering Workflows
 
-**17 / 50 • 34% Complete**
+**18 / 50 • 36% Complete**
 
 </div>
