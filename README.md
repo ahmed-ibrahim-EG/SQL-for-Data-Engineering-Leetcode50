@@ -106,3 +106,107 @@ SQL-for-Data-Engineering-Lab/
 ├── LEET-18-percentage-of-users-attended-a-contest.sql
 ├── LEET-19-queries-quality-and-percentage.sql
 └── LEET-20-monthly-transactions-i.sql
+🏷️ Naming Convention
+LEET-XX-problem-name.sql
+
+Each LeetCode problem is stored as an independent SQL file.
+
+📊 Progress Tracker
+Current Progress
+
+20 / 50 Problems Completed — 40%
+
+████████████████████░░░░░░░░░░░░
+
+#	Problem	Core Concepts	Difficulty	Solution
+01	Recyclable and Low Fat Products	Filtering & Boolean Logic	🟢 Easy	View SQL
+02	Find Customer Referee	NULL Handling & 3VL	🟢 Easy	View SQL
+03	Big Countries	Compound Predicates	🟢 Easy	View SQL
+04	Article Views I	DISTINCT & Filtering	🟢 Easy	View SQL
+05	Invalid Tweets	LEN() & String Functions	🟢 Easy	View SQL
+06	Replace Employee ID With Unique Identifier	LEFT JOIN	🟢 Easy	View SQL
+07	Product Sales Analysis I	Multi-table JOINs	🟢 Easy	View SQL
+08	Customer Who Visited without Transactions	Anti-JOIN & IS NULL	🟢 Easy	View SQL
+09	Rising Temperature	Self JOIN & DATEDIFF()	🟢 Easy	View SQL
+10	Average Time of Process per Machine	Aggregation & Grouping	🟡 Medium	View SQL
+11	Students and Examinations	CROSS JOIN & LEFT JOIN	🟢 Easy	View SQL
+12	Managers with at Least 5 Direct Reports	Self JOIN & HAVING	🟡 Medium	View SQL
+14	Confirmation Rate	CASE WHEN & Conditional Aggregation	🟡 Medium	View SQL
+15	Not Boring Movies	Modulo & Sorting	🟢 Easy	View SQL
+16	Average Selling Price	JOINs, Date Ranges & NULL Handling	🟢 Easy	View SQL
+17	Project Employees I	JOINs, Aggregation & AVG()	🟢 Easy	View SQL
+18	Percentage of Users Attended a Contest	Aggregation, Subquery & ROUND()	🟢 Easy	View SQL
+19	Queries Quality and Percentage	Conditional Aggregation, AVG() & ROUND()	🟢 Easy	View SQL
+20	Monthly Transactions I	Conditional Aggregation & Date Grouping	🟢 Easy	View SQL
+
+20 / 50 • 40% Complete
+
+🧠 What This Repository Demonstrates
+
+This repository demonstrates practical ability to:
+
+Break business problems into SQL operations.
+Select appropriate JOIN strategies.
+Work with multiple relational tables.
+Apply aggregation correctly.
+Handle NULL values safely.
+Use conditional logic.
+Apply analytical SQL patterns.
+Think about edge cases.
+Write readable and maintainable T-SQL.
+Connect SQL concepts to Data Engineering workflows.
+🛠️ Tech Stack & Environment
+Technology	Usage
+Microsoft SQL Server	Database Engine
+T-SQL	Primary SQL Dialect
+SQL Server Management Studio (SSMS)	SQL Development
+LeetCode	SQL Problem Practice
+Git & GitHub	Version Control & Documentation
+🚀 Learning Roadmap
+✅ Completed
+ SQL Fundamentals
+ Filtering & Sorting
+ Aggregations
+ GROUP BY / HAVING
+ JOINs
+ Subqueries
+ CTEs
+ CASE WHEN
+ Variables
+ IF / ELSE
+ Window Functions
+ Stored Procedures
+ Correlated Subqueries
+ NULL Handling
+ T-SQL Fundamentals
+🔄 In Progress
+ Complete LeetCode SQL 50
+ Advanced Window Functions
+ Advanced Subqueries
+ Query Optimization
+ Data Quality Patterns
+ SQL-based ETL Scenarios
+🔜 Next
+ Production-style SQL Projects
+ Staging → Transformation → Warehouse Workflows
+ Star Schema Implementation
+ SQL + Python ETL Integration
+ Data Validation Frameworks
+📈 Learning Philosophy
+
+Don't just solve the query. Understand why the query works.
+
+The purpose of this repository is to develop SQL problem-solving ability, not simply collect solved questions.
+
+Every problem is an opportunity to understand:
+
+Problem → Data Relationships → SQL Logic → Query → Result
+
+This approach is designed to build SQL skills that can transfer directly into Data Engineering workflows.
+
+<div align="center">
+⚡ Building SQL Skills for Real Data Engineering Workflows
+
+20 / 50 • 40% Complete
+
+</div> ```
