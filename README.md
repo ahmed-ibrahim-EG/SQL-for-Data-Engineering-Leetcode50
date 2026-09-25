@@ -5,11 +5,15 @@
 ### *Bridging Analytical Query Patterns & Production Engineering*
 
 <p align="center">
-  <a href="#-repository-overview">Overview</a> •
-  <a href="#-learning-scope--core-concepts">Learning Scope</a> •
+  <a href="#-overview">Overview</a> •
+  <a href="#-key-highlights">Highlights</a> •
+  <a href="#-tech-stack--query-pipeline">Tech Stack</a> •
   <a href="#-repository-structure">Structure</a> •
+  <a href="#-getting-started">Getting Started</a> •
+  <a href="#-usage--examples">Usage</a> •
   <a href="#-progress-tracker">Progress</a> •
-  <a href="#-tech-stack--environment">Tech Stack</a>
+  <a href="#-engineering-notes--key-learnings">Learnings</a> •
+  <a href="#-roadmap">Roadmap</a>
 </p>
 
 <p align="center">
@@ -17,78 +21,54 @@
   <img src="https://img.shields.io/badge/LeetCode%2050-20%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
   <img src="https://img.shields.io/badge/Progress-40%25-0ea5e9?style=for-the-badge" alt="Progress">
   <img src="https://img.shields.io/badge/Status-Active-22c55e?style=for-the-badge" alt="Status">
+  <img src="https://img.shields.io/github/license/ibrhamahmed14-design/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/github/repo-size/ibrhamahmed14-design/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="Repo Size">
+  <img src="https://img.shields.io/github/stars/ibrhamahmed14-design/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="Stars">
 </p>
 
 </div>
 
 ---
 
-## 📌 Repository Overview
+## 📌 Overview
 
-**SQL for Data Engineering Lab** is a hands-on repository focused on strengthening **SQL and T-SQL skills for Data Engineering**.
+**SQL for Data Engineering Lab** is a hands-on repository for building production-relevant SQL and T-SQL skills through the **LeetCode SQL 50** problem set. Each problem is treated as a self-contained engineering exercise — not just "get the right answer," but understand *why* the query works and *where* the same pattern shows up in a real ETL or warehouse pipeline (deduplication, incremental loads, data quality checks, analytical windows).
 
-The repository combines **LeetCode SQL 50 problems** with practical SQL patterns used in data workflows, including:
-
-* JOINs
-* Subqueries
-* CTEs
-* Window Functions
-* Aggregations
-* NULL Handling
-* Data Transformation
-* Data Validation
-* Query Optimization
-
-The goal is not only to solve SQL problems, but to understand **why each query works and how the same patterns are applied in real Data Engineering scenarios**.
+The repository doubles as a **query-pattern reference library**: every solution is stored as an independent, runnable `.sql` file, organized so a specific technique (a self-join, a correlated subquery, a window function) can be located and reused in seconds.
 
 ---
 
-## 🎯 Learning Scope & Core Concepts
+## 🎯 Key Highlights
 
-### 🔎 Query Logic
+- **Pattern-first, not answer-first** — every solution maps back to a reusable Data Engineering technique (dedup logic, NULL-safe transforms, incremental aggregation, ranking/Top-N).
+- **Defensive SQL by default** — explicit `NULL` handling with `ISNULL()` / `COALESCE()`, careful use of `LEFT JOIN` vs. `INNER JOIN` to avoid silent row loss, and attention to three-valued logic (3VL) edge cases.
+- **SARGable, index-aware query writing** — queries are written to stay optimizer-friendly rather than relying on brute-force scans.
+- **One problem, one file** — a strict `LEET-XX-problem-name.sql` naming convention keeps the repo browsable and diff-friendly as it grows.
+- **Live progress tracking** — a maintained problem-by-problem table (concept, difficulty, link) doubles as a personal SQL competency map.
 
-* Filtering
-* Sorting
-* Aggregations
-* `GROUP BY`
-* `HAVING`
-* JOINs
-* Self JOINs
-* Subqueries
-* Correlated Subqueries
-* CTEs
-* Set Operations
+---
 
-### 📊 Analytical SQL
+## 🛠️ Tech Stack & Query Pipeline
 
-* `ROW_NUMBER()`
-* `RANK()`
-* `DENSE_RANK()`
-* `LEAD()`
-* `LAG()`
-* Window Functions
-* Partitioning
-* Ranking & Top-N Analysis
+| Technology | Role |
+|---|---|
+| **Microsoft SQL Server** | Database engine used to execute and validate every query |
+| **T-SQL** | Primary SQL dialect (window functions, CTEs, `ISNULL`/`COALESCE`, stored procedures) |
+| **SQL Server Management Studio (SSMS)** | Query authoring, execution plan inspection, index awareness |
+| **LeetCode SQL 50** | Source of structured, progressively harder problems |
+| **Git & GitHub** | Version control, one commit per solved problem/documentation update |
 
-### 🧹 Data Engineering Patterns
+**Conceptual flow — how each problem is worked:**
 
-* NULL Handling
-* `ISNULL()`
-* `COALESCE()`
-* Data Validation
-* Data Transformation
-* Deduplication
-* Conditional Logic
-* Date & String Manipulation
-
-### ⚙️ SQL Quality & Performance
-
-* SARGability
-* Index Awareness
-* Query Readability
-* Logical Query Processing
-* Edge Cases
-* Defensive SQL
+```mermaid
+flowchart LR
+    A[Business Problem] --> B[Identify Data Relationships]
+    B --> C[Choose SQL Strategy<br/>JOIN / Subquery / CTE / Window Fn]
+    C --> D[Write Defensive T-SQL<br/>NULL handling, edge cases]
+    D --> E[Validate Result Set]
+    E --> F[Refactor for Readability<br/>& SARGability]
+    F --> G[(Commit as<br/>LEET-XX-problem-name.sql)]
+```
 
 ---
 
@@ -102,111 +82,143 @@ SQL-for-Data-Engineering-Lab/
 ├── LEET-01-recyclable-and-low-fat-products.sql
 ├── LEET-02-find-customer-referee.sql
 ├── LEET-03-big-countries.sql
+├── LEET-04-article-views-i.sql
+├── LEET-05-invalid-tweets.sql
 ├── ...
 ├── LEET-18-percentage-of-users-attended-a-contest.sql
 ├── LEET-19-queries-quality-and-percentage.sql
 └── LEET-20-monthly-transactions-i.sql
-🏷️ Naming Convention
-LEET-XX-problem-name.sql
+```
 
-Each LeetCode problem is stored as an independent SQL file.
+**Naming convention:** `LEET-XX-problem-name.sql` — each LeetCode problem lives in its own independent, self-documenting file. No shared setup script; every file assumes LeetCode's standard schema/sample data for that problem, so files can be opened and run in isolation.
 
-📊 Progress Tracker
-Current Progress
+---
 
-20 / 50 Problems Completed — 40%
+## 🚀 Getting Started
 
-████████████████████░░░░░░░░░░░░
+### Prerequisites
+- Microsoft SQL Server (2019+ recommended) or SQL Server Express
+- SQL Server Management Studio (SSMS) or Azure Data Studio
+- The relevant LeetCode problem's sample schema loaded (each `.sql` file's header comment lists which problem/table schema it targets)
 
-#	Problem	Core Concepts	Difficulty	Solution
-01	Recyclable and Low Fat Products	Filtering & Boolean Logic	🟢 Easy	View SQL
-02	Find Customer Referee	NULL Handling & 3VL	🟢 Easy	View SQL
-03	Big Countries	Compound Predicates	🟢 Easy	View SQL
-04	Article Views I	DISTINCT & Filtering	🟢 Easy	View SQL
-05	Invalid Tweets	LEN() & String Functions	🟢 Easy	View SQL
-06	Replace Employee ID With Unique Identifier	LEFT JOIN	🟢 Easy	View SQL
-07	Product Sales Analysis I	Multi-table JOINs	🟢 Easy	View SQL
-08	Customer Who Visited without Transactions	Anti-JOIN & IS NULL	🟢 Easy	View SQL
-09	Rising Temperature	Self JOIN & DATEDIFF()	🟢 Easy	View SQL
-10	Average Time of Process per Machine	Aggregation & Grouping	🟡 Medium	View SQL
-11	Students and Examinations	CROSS JOIN & LEFT JOIN	🟢 Easy	View SQL
-12	Managers with at Least 5 Direct Reports	Self JOIN & HAVING	🟡 Medium	View SQL
-14	Confirmation Rate	CASE WHEN & Conditional Aggregation	🟡 Medium	View SQL
-15	Not Boring Movies	Modulo & Sorting	🟢 Easy	View SQL
-16	Average Selling Price	JOINs, Date Ranges & NULL Handling	🟢 Easy	View SQL
-17	Project Employees I	JOINs, Aggregation & AVG()	🟢 Easy	View SQL
-18	Percentage of Users Attended a Contest	Aggregation, Subquery & ROUND()	🟢 Easy	View SQL
-19	Queries Quality and Percentage	Conditional Aggregation, AVG() & ROUND()	🟢 Easy	View SQL
-20	Monthly Transactions I	Conditional Aggregation & Date Grouping	🟢 Easy	View SQL
+### Setup
 
-20 / 50 • 40% Complete
+```bash
+# 1. Clone the repository
+git clone https://github.com/ibrhamahmed14-design/SQL-for-Data-Engineering-Lab.git
+cd SQL-for-Data-Engineering-Lab
 
-🧠 What This Repository Demonstrates
+# 2. Open the repo folder in SSMS / Azure Data Studio
+#    (or open individual .sql files directly)
+```
 
-This repository demonstrates practical ability to:
+No package installation or environment variables are required — this is a pure T-SQL repository. Each script is written to run against the table schema defined by its corresponding LeetCode problem.
 
-Break business problems into SQL operations.
-Select appropriate JOIN strategies.
-Work with multiple relational tables.
-Apply aggregation correctly.
-Handle NULL values safely.
-Use conditional logic.
-Apply analytical SQL patterns.
-Think about edge cases.
-Write readable and maintainable T-SQL.
-Connect SQL concepts to Data Engineering workflows.
-🛠️ Tech Stack & Environment
-Technology	Usage
-Microsoft SQL Server	Database Engine
-T-SQL	Primary SQL Dialect
-SQL Server Management Studio (SSMS)	SQL Development
-LeetCode	SQL Problem Practice
-Git & GitHub	Version Control & Documentation
-🚀 Learning Roadmap
-✅ Completed
- SQL Fundamentals
- Filtering & Sorting
- Aggregations
- GROUP BY / HAVING
- JOINs
- Subqueries
- CTEs
- CASE WHEN
- Variables
- IF / ELSE
- Window Functions
- Stored Procedures
- Correlated Subqueries
- NULL Handling
- T-SQL Fundamentals
-🔄 In Progress
- Complete LeetCode SQL 50
- Advanced Window Functions
- Advanced Subqueries
- Query Optimization
- Data Quality Patterns
- SQL-based ETL Scenarios
-🔜 Next
- Production-style SQL Projects
- Staging → Transformation → Warehouse Workflows
- Star Schema Implementation
- SQL + Python ETL Integration
- Data Validation Frameworks
-📈 Learning Philosophy
+---
 
-Don't just solve the query. Understand why the query works.
+## 💡 Usage & Examples
 
-The purpose of this repository is to develop SQL problem-solving ability, not simply collect solved questions.
+Open any `LEET-XX-*.sql` file and run it against the matching sample tables. Example:
 
-Every problem is an opportunity to understand:
+**`LEET-09-rising-temperature.sql`** — self-join on a date-shifted copy of the same table:
 
-Problem → Data Relationships → SQL Logic → Query → Result
+```sql
+SELECT w2.id
+FROM Weather w1
+JOIN Weather w2
+  ON DATEDIFF(DAY, w1.recordDate, w2.recordDate) = 1
+WHERE w2.temperature > w1.temperature;
+```
 
-This approach is designed to build SQL skills that can transfer directly into Data Engineering workflows.
+**Expected output:**
+
+| id |
+|----|
+| 2  |
+| 4  |
+
+Each file follows the same pattern: a short comment block stating the problem and the core concept it demonstrates, followed by the query itself — no external dependencies, no fixtures beyond LeetCode's own sample data.
+
+---
+
+## 📊 Progress Tracker
+
+**20 / 50 problems completed — 40%**
+
+```
+████████████████████░░░░░░░░░░░░  40%
+```
+
+| # | Problem | Core Concept | Difficulty |
+|---|---|---|---|
+| 01 | Recyclable and Low Fat Products | Filtering & Boolean Logic | 🟢 Easy |
+| 02 | Find Customer Referee | NULL Handling & 3VL | 🟢 Easy |
+| 03 | Big Countries | Compound Predicates | 🟢 Easy |
+| 04 | Article Views I | `DISTINCT` & Filtering | 🟢 Easy |
+| 05 | Invalid Tweets | `LEN()` & String Functions | 🟢 Easy |
+| 06 | Replace Employee ID With Unique Identifier | `LEFT JOIN` | 🟢 Easy |
+| 07 | Product Sales Analysis I | Multi-table JOINs | 🟢 Easy |
+| 08 | Customers Who Visited Without Transactions | Anti-JOIN & `IS NULL` | 🟢 Easy |
+| 09 | Rising Temperature | Self-JOIN & `DATEDIFF()` | 🟢 Easy |
+| 10 | Average Time of Process per Machine | Aggregation & Grouping | 🟡 Medium |
+| 11 | Students and Examinations | `CROSS JOIN` & `LEFT JOIN` | 🟢 Easy |
+| 12 | Managers with at Least 5 Direct Reports | Self-JOIN & `HAVING` | 🟡 Medium |
+| 14 | Confirmation Rate | `CASE WHEN` & Conditional Aggregation | 🟡 Medium |
+| 15 | Not Boring Movies | Modulo & Sorting | 🟢 Easy |
+| 16 | Average Selling Price | JOINs, Date Ranges & NULL Handling | 🟢 Easy |
+| 17 | Project Employees I | JOINs, Aggregation & `AVG()` | 🟢 Easy |
+| 18 | Percentage of Users Attended a Contest | Aggregation, Subquery & `ROUND()` | 🟢 Easy |
+| 19 | Queries Quality and Percentage | Conditional Aggregation, `AVG()` & `ROUND()` | 🟢 Easy |
+| 20 | Monthly Transactions I | Conditional Aggregation & Date Grouping | 🟢 Easy |
+
+> Problem 13 is intentionally skipped in the current pass and will be filled in during a later cleanup commit.
+
+---
+
+## 🧠 Engineering Notes & Key Learnings
+
+- **NULL handling isn't optional** — several early problems (e.g., Find Customer Referee) hinge entirely on correct 3-valued-logic reasoning; a naive `!=` predicate silently drops valid rows.
+- **JOIN choice changes correctness, not just performance** — anti-JOIN patterns (`LEFT JOIN ... WHERE right.id IS NULL`) are used deliberately instead of `NOT IN`, which breaks silently in the presence of NULLs on the subquery side.
+- **Self-joins as a stand-in for time-series comparison** — problems like Rising Temperature demonstrate a pattern used constantly in DE pipelines: comparing a row to "yesterday's" or "the previous period's" row without a dedicated lag table.
+- **Conditional aggregation over multiple `CASE WHEN` passes** — used for computing rates/percentages (Confirmation Rate, Queries Quality) in a single scan rather than multiple correlated subqueries, which is closer to how these metrics would be computed in a warehouse aggregation layer.
+- **Readability is treated as a correctness concern** — queries are refactored for SARGability and clarity even after they return the right answer, since unreadable SQL is a liability in a real pipeline's maintenance cost.
+
+---
+
+## 🔭 Roadmap
+
+**In progress**
+- [ ] Complete remaining LeetCode SQL 50 problems (30 remaining)
+- [ ] Advanced window functions (framing, running totals, `NTILE`)
+- [ ] Deeper query optimization pass with execution-plan annotations per file
+
+**Next**
+- [ ] Production-style SQL project: staging → transformation → warehouse workflow
+- [ ] Star schema implementation exercise
+- [ ] SQL + Python ETL integration (this repo's patterns feeding a pandas/pyodbc pipeline)
+- [ ] Formal data-validation query library (reusable quality-check templates)
+
+---
+
+## 📈 Learning Philosophy
+
+> Don't just solve the query — understand *why* it works.
+
+Every problem here is worked through the same chain: **Problem → Data Relationships → SQL Logic → Query → Result**, with the explicit goal of building SQL judgment that transfers directly into real Data Engineering pipelines, not just LeetCode point-scoring.
+
+---
+
+## 👤 Author & Contact
+
+**Ahmed Ibrahim** — CS Student & Aspiring Data Engineer
+
+[![GitHub](https://img.shields.io/badge/GitHub-ibrhamahmed14--design-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ibrhamahmed14-design)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ahmed%20Ibrahim-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-ibrahim-36600b2a5)
 
 <div align="center">
-⚡ Building SQL Skills for Real Data Engineering Workflows
 
-20 / 50 • 40% Complete
+⚡ *Building SQL Skills for Real Data Engineering Workflows* ⚡
 
-</div> ```
+**20 / 50 • 40% Complete**
+
+</div>
