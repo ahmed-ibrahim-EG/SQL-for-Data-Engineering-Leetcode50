@@ -21,9 +21,9 @@
   <img src="https://img.shields.io/badge/LeetCode%2050-20%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
   <img src="https://img.shields.io/badge/Progress-40%25-0ea5e9?style=for-the-badge" alt="Progress">
   <img src="https://img.shields.io/badge/Status-Active-22c55e?style=for-the-badge" alt="Status">
-  <img src="https://img.shields.io/github/license/ibrhamahmed14-design/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="License">
-  <img src="https://img.shields.io/github/repo-size/ibrhamahmed14-design/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="Repo Size">
-  <img src="https://img.shields.io/github/stars/ibrhamahmed14-design/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="Stars">
+  <img src="https://img.shields.io/github/license/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/github/repo-size/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="Repo Size">
+  <img src="https://img.shields.io/github/stars/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="Stars">
 </p>
 
 </div>
@@ -32,7 +32,7 @@
 
 ## 📌 Overview
 
-**SQL for Data Engineering Lab** is a hands-on repository for building production-relevant SQL and T-SQL skills through the **LeetCode SQL 50** problem set. Each problem is treated as a self-contained engineering exercise — not just "get the right answer," but understand *why* the query works and *where* the same pattern shows up in a real ETL or warehouse pipeline (deduplication, incremental loads, data quality checks, analytical windows).
+**SQL for Data Engineering Lab** is a repository dedicated entirely to solving the **LeetCode SQL 50** — all 50 problems, each treated as a self-contained engineering exercise rather than a throwaway answer. The goal for every problem is to understand *why* the query works and *where* the same pattern shows up in a real ETL or warehouse pipeline (deduplication, incremental loads, data quality checks, analytical windows).
 
 The repository doubles as a **query-pattern reference library**: every solution is stored as an independent, runnable `.sql` file, organized so a specific technique (a self-join, a correlated subquery, a window function) can be located and reused in seconds.
 
@@ -105,7 +105,7 @@ SQL-for-Data-Engineering-Lab/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/ibrhamahmed14-design/SQL-for-Data-Engineering-Lab.git
+git clone https://github.com/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab.git
 cd SQL-for-Data-Engineering-Lab
 
 # 2. Open the repo folder in SSMS / Azure Data Studio
@@ -149,27 +149,27 @@ Each file follows the same pattern: a short comment block stating the problem an
 ████████████████████░░░░░░░░░░░░  40%
 ```
 
-| # | Problem | Core Concept | Difficulty |
-|---|---|---|---|
-| 01 | Recyclable and Low Fat Products | Filtering & Boolean Logic | 🟢 Easy |
-| 02 | Find Customer Referee | NULL Handling & 3VL | 🟢 Easy |
-| 03 | Big Countries | Compound Predicates | 🟢 Easy |
-| 04 | Article Views I | `DISTINCT` & Filtering | 🟢 Easy |
-| 05 | Invalid Tweets | `LEN()` & String Functions | 🟢 Easy |
-| 06 | Replace Employee ID With Unique Identifier | `LEFT JOIN` | 🟢 Easy |
-| 07 | Product Sales Analysis I | Multi-table JOINs | 🟢 Easy |
-| 08 | Customers Who Visited Without Transactions | Anti-JOIN & `IS NULL` | 🟢 Easy |
-| 09 | Rising Temperature | Self-JOIN & `DATEDIFF()` | 🟢 Easy |
-| 10 | Average Time of Process per Machine | Aggregation & Grouping | 🟡 Medium |
-| 11 | Students and Examinations | `CROSS JOIN` & `LEFT JOIN` | 🟢 Easy |
-| 12 | Managers with at Least 5 Direct Reports | Self-JOIN & `HAVING` | 🟡 Medium |
-| 14 | Confirmation Rate | `CASE WHEN` & Conditional Aggregation | 🟡 Medium |
-| 15 | Not Boring Movies | Modulo & Sorting | 🟢 Easy |
-| 16 | Average Selling Price | JOINs, Date Ranges & NULL Handling | 🟢 Easy |
-| 17 | Project Employees I | JOINs, Aggregation & `AVG()` | 🟢 Easy |
-| 18 | Percentage of Users Attended a Contest | Aggregation, Subquery & `ROUND()` | 🟢 Easy |
-| 19 | Queries Quality and Percentage | Conditional Aggregation, `AVG()` & `ROUND()` | 🟢 Easy |
-| 20 | Monthly Transactions I | Conditional Aggregation & Date Grouping | 🟢 Easy |
+| # | Problem | Core Concept | Difficulty | Solution |
+|---|---|---|---|---|
+| 01 | Recyclable and Low Fat Products | Filtering & Boolean Logic | 🟢 Easy | [View SQL](./LEET-01-recyclable-and-low-fat-products.sql) |
+| 02 | Find Customer Referee | NULL Handling & 3VL | 🟢 Easy | [View SQL](./LEET-02-find-customer-referee.sql) |
+| 03 | Big Countries | Compound Predicates | 🟢 Easy | [View SQL](./LEET-03-big-countries.sql) |
+| 04 | Article Views I | `DISTINCT` & Filtering | 🟢 Easy | [View SQL](./LEET-04-article-views-i.sql) |
+| 05 | Invalid Tweets | `LEN()` & String Functions | 🟢 Easy | [View SQL](./LEET-05-invalid-tweets.sql) |
+| 06 | Replace Employee ID With Unique Identifier | `LEFT JOIN` | 🟢 Easy | [View SQL](./LEET-06-replace-employee-id-with-unique-identifier.sql) |
+| 07 | Product Sales Analysis I | Multi-table JOINs | 🟢 Easy | [View SQL](./LEET-07-product-sales-analysis-i.sql) |
+| 08 | Customers Who Visited Without Transactions | Anti-JOIN & `IS NULL` | 🟢 Easy | [View SQL](./LEET-08-customer-who-visited-without-transactions.sql) |
+| 09 | Rising Temperature | Self-JOIN & `DATEDIFF()` | 🟢 Easy | [View SQL](./LEET-09-rising-temperature.sql) |
+| 10 | Average Time of Process per Machine | Aggregation & Grouping | 🟡 Medium | [View SQL](./LEET-10-average-time-of-process-per-machine.sql) |
+| 11 | Students and Examinations | `CROSS JOIN` & `LEFT JOIN` | 🟢 Easy | [View SQL](./LEET-11-students-and-examinations.sql) |
+| 12 | Managers with at Least 5 Direct Reports | Self-JOIN & `HAVING` | 🟡 Medium | [View SQL](./LEET-12-managers-with-at-least-5-direct-reports.sql) |
+| 14 | Confirmation Rate | `CASE WHEN` & Conditional Aggregation | 🟡 Medium | [View SQL](./LEET-14-confirmation-rate.sql) |
+| 15 | Not Boring Movies | Modulo & Sorting | 🟢 Easy | [View SQL](./LEET-15-not-boring-movies.sql) |
+| 16 | Average Selling Price | JOINs, Date Ranges & NULL Handling | 🟢 Easy | [View SQL](./LEET-16-average-selling-price.sql) |
+| 17 | Project Employees I | JOINs, Aggregation & `AVG()` | 🟢 Easy | [View SQL](./LEET-17-project-employees-i.sql) |
+| 18 | Percentage of Users Attended a Contest | Aggregation, Subquery & `ROUND()` | 🟢 Easy | [View SQL](./LEET-18-percentage-of-users-attended-a-contest.sql) |
+| 19 | Queries Quality and Percentage | Conditional Aggregation, `AVG()` & `ROUND()` | 🟢 Easy | [View SQL](./LEET-19-queries-quality-and-percentage.sql) |
+| 20 | Monthly Transactions I | Conditional Aggregation & Date Grouping | 🟢 Easy | [View SQL](./LEET-20-monthly-transactions-i.sql) |
 
 > Problem 13 is intentionally skipped in the current pass and will be filled in during a later cleanup commit.
 
@@ -212,7 +212,7 @@ Every problem here is worked through the same chain: **Problem → Data Relation
 
 **Ahmed Ibrahim** — CS Student & Aspiring Data Engineer
 
-[![GitHub](https://img.shields.io/badge/GitHub-ibrhamahmed14--design-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ibrhamahmed14-design)
+[![GitHub](https://img.shields.io/badge/GitHub-ahmed--ibrahim--EG-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ahmed-ibrahim-EG)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Ahmed%20Ibrahim-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-ibrahim-36600b2a5)
 
 <div align="center">
