@@ -18,8 +18,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/SQL%20Server-T--SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server">
-  <img src="https://img.shields.io/badge/LeetCode%2050-21%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
-  <img src="https://img.shields.io/badge/Progress-42%25-0ea5e9?style=for-the-badge" alt="Progress">
+  <img src="https://img.shields.io/badge/LeetCode%2050-22%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
+  <img src="https://img.shields.io/badge/Progress-44%25-0ea5e9?style=for-the-badge" alt="Progress">
   <img src="https://img.shields.io/badge/Status-Active-22c55e?style=for-the-badge" alt="Status">
   <img src="https://img.shields.io/github/license/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="License">
   <img src="https://img.shields.io/github/repo-size/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="Repo Size">
@@ -88,7 +88,8 @@ SQL-for-Data-Engineering-Lab/
 ├── LEET-18-percentage-of-users-attended-a-contest.sql
 ├── LEET-19-queries-quality-and-percentage.sql
 ├── LEET-20-monthly-transactions-i.sql
-└── LEET-21-immediate-food-delivery-ii.sql
+├── LEET-21-immediate-food-delivery-ii.sql
+└── LEET-22-game-play-analysis-iv.sql
 ```
 
 **Naming convention:** `LEET-XX-problem-name.sql` — each LeetCode problem lives in its own independent, self-documenting file. No shared setup script; every file assumes LeetCode's standard schema/sample data for that problem, so files can be opened and run in isolation.
@@ -145,10 +146,10 @@ Each file follows the same pattern: a short comment block stating the problem an
 
 ## 📊 Progress Tracker
 
-**21 / 50 problems completed — 42%**
+**22 / 50 problems completed — 44%**
 
-```
-█████████████████████░░░░░░░░░░░░  42%
+```text
+██████████████████████░░░░░░░░  44%
 ```
 
 | #  | Problem                                    | Core Concept                                 | Difficulty | Solution                                                             |
@@ -173,6 +174,7 @@ Each file follows the same pattern: a short comment block stating the problem an
 | 19 | Queries Quality and Percentage             | Conditional Aggregation, `AVG()` & `ROUND()` | 🟢 Easy    | [View SQL](./LEET-19-queries-quality-and-percentage.sql)             |
 | 20 | Monthly Transactions I                     | Conditional Aggregation & Date Grouping      | 🟢 Easy    | [View SQL](./LEET-20-monthly-transactions-i.sql)                     |
 | 21 | Immediate Food Delivery II                 | Aggregation, Subquery & `MIN()`              | 🟡 Medium  | [View SQL](./LEET-21-immediate-food-delivery-ii.sql)                 |
+| 22 | Game Play Analysis IV                      | CTE, `MIN()`, `DATEDIFF()` & `ROUND()`       | 🟡 Medium  | [View SQL](./LEET-22-game-play-analysis-iv.sql)                      |
 
 > Problem 13 is intentionally skipped in the current pass and will be filled in during a later cleanup commit.
 
@@ -184,8 +186,8 @@ Each file follows the same pattern: a short comment block stating the problem an
 * **JOIN choice changes correctness, not just performance** — anti-JOIN patterns (`LEFT JOIN ... WHERE right.id IS NULL`) are used deliberately instead of `NOT IN`, which breaks silently in the presence of NULLs on the subquery side.
 * **Self-joins as a stand-in for time-series comparison** — problems like Rising Temperature demonstrate a pattern used constantly in DE pipelines: comparing a row to "yesterday's" or "the previous period's" row without a dedicated lag table.
 * **Conditional aggregation over multiple `CASE WHEN` passes** — used for computing rates/percentages (Confirmation Rate, Queries Quality) in a single scan rather than multiple correlated subqueries, which is closer to how these metrics would be computed in a warehouse aggregation layer.
-* **Readability is treated as a correctness concern** — queries are refactored for SARGability and clarity even after they return the right answer, since unreadable SQL is a liability in a real pipeline's maintenance cost.
 * **First-row-per-entity pattern** — Immediate Food Delivery II introduces a common analytical pattern: identifying the earliest record for each customer before calculating a metric over that subset.
+* **First-event retention logic** — Game Play Analysis IV introduces a common analytical pattern: identifying each player's first activity date, checking for activity on the immediately following day, and calculating a retention fraction across the full player population.
 
 ---
 
@@ -193,7 +195,7 @@ Each file follows the same pattern: a short comment block stating the problem an
 
 **In progress**
 
-* [ ] Complete remaining LeetCode SQL 50 problems (29 remaining)
+* [ ] Complete remaining LeetCode SQL 50 problems (28 remaining)
 * [ ] Advanced window functions (framing, running totals, `NTILE`)
 * [ ] Deeper query optimization pass with execution-plan annotations per file
 
@@ -225,6 +227,6 @@ Every problem here is worked through the same chain: **Problem → Data Relation
 
 ⚡ *Building SQL Skills for Real Data Engineering Workflows* ⚡
 
-**21 / 50 • 42% Complete**
+**22 / 50 • 44% Complete**
 
 </div>
