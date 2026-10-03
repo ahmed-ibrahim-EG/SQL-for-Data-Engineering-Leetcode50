@@ -18,8 +18,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/SQL%20Server-T--SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server">
-  <img src="https://img.shields.io/badge/LeetCode%2050-25%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
-  <img src="https://img.shields.io/badge/Progress-50%25-0ea5e9?style=for-the-badge" alt="Progress">
+  <img src="https://img.shields.io/badge/LeetCode%2050-29%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
+  <img src="https://img.shields.io/badge/Progress-58%25-0ea5e9?style=for-the-badge" alt="Progress">
   <img src="https://img.shields.io/badge/Status-Active-22c55e?style=for-the-badge" alt="Status">
   <img src="https://img.shields.io/github/license/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="License">
   <img src="https://img.shields.io/github/repo-size/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="Repo Size">
@@ -92,7 +92,11 @@ SQL-for-Data-Engineering-Lab/
 ├── LEET-22-game-play-analysis-iv.sql
 ├── LEET-23-number-of-unique-subjects-taught-by-each-teacher.sql
 ├── LEET-24-daily-active-user-count.sql
-└── LEET-25-first-year-sales.sql
+├── LEET-25-first-year-sales.sql
+├── LEET-26-classes-more-than-5-students.sql
+├── LEET-27-find-followers-count.sql
+├── LEET-28-biggest-single-number.sql
+└── LEET-29-customers-who-bought-all-products.sql
 ```
 
 **Naming convention:** `LEET-XX-problem-name.sql` — each LeetCode problem lives in its own independent, self-documenting file. No shared setup script; every file assumes LeetCode's standard schema/sample data for that problem, so files can be opened and run in isolation.
@@ -149,10 +153,10 @@ Each file follows the same pattern: a short comment block stating the problem an
 
 ## 📊 Progress Tracker
 
-**25 / 50 problems completed — 50%**
+**29 / 50 problems completed — 58%**
 
 ```text
-████████████████████████████████  50%
+█████████████████████████████████████  58%
 ```
 
 | #  | Problem                                          | Core Concept                                 | Difficulty | Solution                                                                   |
@@ -181,6 +185,10 @@ Each file follows the same pattern: a short comment block stating the problem an
 | 23 | Number of Unique Subjects Taught by Each Teacher | `COUNT(DISTINCT)` & `GROUP BY`               | 🟢 Easy    | [View SQL](./LEET-23-number-of-unique-subjects-taught-by-each-teacher.sql) |
 | 24 | User Activity for the Past 30 Days I             | Date Filtering & `COUNT(DISTINCT)`           | 🟢 Easy    | [View SQL](./LEET-24-daily-active-user-count.sql)                          |
 | 25 | Product Sales Analysis III                       | Window Functions & `MIN() OVER()`            | 🟡 Medium  | [View SQL](./LEET-25-first-year-sales.sql)                                 |
+| 26 | Classes More Than 5 Students                     | `GROUP BY`, `COUNT()` & `HAVING`             | 🟢 Easy    | [View SQL](./LEET-26-classes-more-than-5-students.sql)                     |
+| 27 | Find Followers Count                             | `COUNT()` & `GROUP BY`                       | 🟢 Easy    | [View SQL](./LEET-27-find-followers-count.sql)                             |
+| 28 | Biggest Single Number                            | `MAX()`, `GROUP BY` & Subquery               | 🟢 Easy    | [View SQL](./LEET-28-biggest-single-number.sql)                            |
+| 29 | Customers Who Bought All Products                | `COUNT(DISTINCT)`, `GROUP BY` & Subquery     | 🟡 Medium  | [View SQL](./LEET-29-customers-who-bought-all-products.sql)                |
 
 > Problem 13 is intentionally skipped in the current pass and will be filled in during a later cleanup commit.
 
@@ -197,6 +205,10 @@ Each file follows the same pattern: a short comment block stating the problem an
 * **Distinct counting at the entity level** — Number of Unique Subjects Taught by Each Teacher demonstrates how `COUNT(DISTINCT ...)` prevents duplicate relationships from inflating entity-level metrics.
 * **Daily active-user aggregation** — User Activity for the Past 30 Days I demonstrates combining date-range filtering with `COUNT(DISTINCT user_id)` to calculate daily activity metrics while ignoring duplicate activity rows.
 * **Window functions for first-year analysis** — Product Sales Analysis III demonstrates using `MIN() OVER (PARTITION BY ...)` to attach each product's earliest year to every related row before filtering for first-year sales.
+* **Threshold-based aggregation** — Classes More Than 5 Students demonstrates using `GROUP BY`, `COUNT()`, and `HAVING` to filter entities based on aggregated row counts.
+* **Entity-level counting** — Find Followers Count demonstrates aggregating relationship records at the user level to calculate the number of followers per user.
+* **Single-occurrence filtering** — Biggest Single Number demonstrates grouping duplicated values, filtering for values that occur exactly once, and then applying an aggregate to find the largest qualifying value.
+* **Relational division pattern** — Customers Who Bought All Products demonstrates comparing each customer's distinct product coverage against the complete product set to identify customers who satisfy an "all" requirement.
 
 ---
 
@@ -204,7 +216,7 @@ Each file follows the same pattern: a short comment block stating the problem an
 
 **In progress**
 
-* [ ] Complete remaining LeetCode SQL 50 problems (25 remaining)
+* [ ] Complete remaining LeetCode SQL 50 problems (21 remaining)
 * [ ] Advanced window functions (framing, running totals, `NTILE`)
 * [ ] Deeper query optimization pass with execution-plan annotations per file
 
@@ -236,6 +248,6 @@ Every problem here is worked through the same chain: **Problem → Data Relation
 
 ⚡ *Building SQL Skills for Real Data Engineering Workflows* ⚡
 
-**25 / 50 • 50% Complete**
+**29 / 50 • 58% Complete**
 
 </div>
