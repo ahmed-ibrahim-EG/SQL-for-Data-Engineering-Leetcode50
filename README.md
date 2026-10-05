@@ -18,8 +18,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/SQL%20Server-T--SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server">
-  <img src="https://img.shields.io/badge/LeetCode%2050-29%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
-  <img src="https://img.shields.io/badge/Progress-58%25-0ea5e9?style=for-the-badge" alt="Progress">
+  <img src="https://img.shields.io/badge/LeetCode%2050-30%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
+  <img src="https://img.shields.io/badge/Progress-60%25-0ea5e9?style=for-the-badge" alt="Progress">
   <img src="https://img.shields.io/badge/Status-Active-22c55e?style=for-the-badge" alt="Status">
   <img src="https://img.shields.io/github/license/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="License">
   <img src="https://img.shields.io/github/repo-size/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="Repo Size">
@@ -96,7 +96,8 @@ SQL-for-Data-Engineering-Lab/
 ├── LEET-26-classes-more-than-5-students.sql
 ├── LEET-27-find-followers-count.sql
 ├── LEET-28-biggest-single-number.sql
-└── LEET-29-customers-who-bought-all-products.sql
+├── LEET-29-customers-who-bought-all-products.sql
+└── LEET-30-employees-with-reports.sql
 ```
 
 **Naming convention:** `LEET-XX-problem-name.sql` — each LeetCode problem lives in its own independent, self-documenting file. No shared setup script; every file assumes LeetCode's standard schema/sample data for that problem, so files can be opened and run in isolation.
@@ -153,10 +154,10 @@ Each file follows the same pattern: a short comment block stating the problem an
 
 ## 📊 Progress Tracker
 
-**29 / 50 problems completed — 58%**
+**30 / 50 problems completed — 60%**
 
 ```text
-█████████████████████████████████████  58%
+████████████████████████████████████████  60%
 ```
 
 | #  | Problem                                          | Core Concept                                 | Difficulty | Solution                                                                   |
@@ -189,6 +190,7 @@ Each file follows the same pattern: a short comment block stating the problem an
 | 27 | Find Followers Count                             | `COUNT()` & `GROUP BY`                       | 🟢 Easy    | [View SQL](./LEET-27-find-followers-count.sql)                             |
 | 28 | Biggest Single Number                            | `MAX()`, `GROUP BY` & Subquery               | 🟢 Easy    | [View SQL](./LEET-28-biggest-single-number.sql)                            |
 | 29 | Customers Who Bought All Products                | `COUNT(DISTINCT)`, `GROUP BY` & Subquery     | 🟡 Medium  | [View SQL](./LEET-29-customers-who-bought-all-products.sql)                |
+| 30 | Employees With Reports                           | CTE, Aggregation & Self-JOIN                 | 🟢 Easy    | [View SQL](./LEET-30-employees-with-reports.sql)                           |
 
 > Problem 13 is intentionally skipped in the current pass and will be filled in during a later cleanup commit.
 
@@ -209,6 +211,8 @@ Each file follows the same pattern: a short comment block stating the problem an
 * **Entity-level counting** — Find Followers Count demonstrates aggregating relationship records at the user level to calculate the number of followers per user.
 * **Single-occurrence filtering** — Biggest Single Number demonstrates grouping duplicated values, filtering for values that occur exactly once, and then applying an aggregate to find the largest qualifying value.
 * **Relational division pattern** — Customers Who Bought All Products demonstrates comparing each customer's distinct product coverage against the complete product set to identify customers who satisfy an "all" requirement.
+* **Manager-level aggregation** — Employees With Reports demonstrates grouping employees by their direct manager, calculating report counts and average report age, then joining the aggregated result back to the employee table to retrieve the manager's identifying information.
+* **Integer aggregation and data types** — Employees With Reports also highlights an important SQL Server detail: `AVG()` over an integer column can produce integer behavior, so explicit casting is required when decimal precision must be preserved before rounding.
 
 ---
 
@@ -216,7 +220,7 @@ Each file follows the same pattern: a short comment block stating the problem an
 
 **In progress**
 
-* [ ] Complete remaining LeetCode SQL 50 problems (21 remaining)
+* [ ] Complete remaining LeetCode SQL 50 problems (20 remaining)
 * [ ] Advanced window functions (framing, running totals, `NTILE`)
 * [ ] Deeper query optimization pass with execution-plan annotations per file
 
@@ -248,6 +252,6 @@ Every problem here is worked through the same chain: **Problem → Data Relation
 
 ⚡ *Building SQL Skills for Real Data Engineering Workflows* ⚡
 
-**29 / 50 • 58% Complete**
+**30 / 50 • 60% Complete**
 
 </div>
