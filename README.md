@@ -18,8 +18,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/SQL%20Server-T--SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server">
-  <img src="https://img.shields.io/badge/LeetCode%2050-30%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
-  <img src="https://img.shields.io/badge/Progress-60%25-0ea5e9?style=for-the-badge" alt="Progress">
+  <img src="https://img.shields.io/badge/LeetCode%2050-34%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
+  <img src="https://img.shields.io/badge/Progress-68%25-0ea5e9?style=for-the-badge" alt="Progress">
   <img src="https://img.shields.io/badge/Status-Active-22c55e?style=for-the-badge" alt="Status">
   <img src="https://img.shields.io/github/license/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="License">
   <img src="https://img.shields.io/github/repo-size/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="Repo Size">
@@ -97,7 +97,11 @@ SQL-for-Data-Engineering-Lab/
 ├── LEET-27-find-followers-count.sql
 ├── LEET-28-biggest-single-number.sql
 ├── LEET-29-customers-who-bought-all-products.sql
-└── LEET-30-employees-with-reports.sql
+├── LEET-30-employees-with-reports.sql
+├── LEET-31-primary-department-for-each-employee.sql
+├── LEET-32-triangle-judgement.sql
+├── LEET-33-consecutive-numbers.sql
+└── LEET-34-product-price-at-a-given-date.sql
 ```
 
 **Naming convention:** `LEET-XX-problem-name.sql` — each LeetCode problem lives in its own independent, self-documenting file. No shared setup script; every file assumes LeetCode's standard schema/sample data for that problem, so files can be opened and run in isolation.
@@ -154,43 +158,47 @@ Each file follows the same pattern: a short comment block stating the problem an
 
 ## 📊 Progress Tracker
 
-**30 / 50 problems completed — 60%**
+**34 / 50 problems completed — 68%**
 
 ```text
-████████████████████████████████████████  60%
+████████████████████████████████████████████████████  68%
 ```
 
-| #  | Problem                                          | Core Concept                                 | Difficulty | Solution                                                                   |
-| -- | ------------------------------------------------ | -------------------------------------------- | ---------- | -------------------------------------------------------------------------- |
-| 01 | Recyclable and Low Fat Products                  | Filtering & Boolean Logic                    | 🟢 Easy    | [View SQL](./LEET-01-recyclable-and-low-fat-products.sql)                  |
-| 02 | Find Customer Referee                            | NULL Handling & 3VL                          | 🟢 Easy    | [View SQL](./LEET-02-find-customer-referee.sql)                            |
-| 03 | Big Countries                                    | Compound Predicates                          | 🟢 Easy    | [View SQL](./LEET-03-big-countries.sql)                                    |
-| 04 | Article Views I                                  | `DISTINCT` & Filtering                       | 🟢 Easy    | [View SQL](./LEET-04-article-views-i.sql)                                  |
-| 05 | Invalid Tweets                                   | `LEN()` & String Functions                   | 🟢 Easy    | [View SQL](./LEET-05-invalid-tweets.sql)                                   |
-| 06 | Replace Employee ID With Unique Identifier       | `LEFT JOIN`                                  | 🟢 Easy    | [View SQL](./LEET-06-replace-employee-id-with-unique-identifier.sql)       |
-| 07 | Product Sales Analysis I                         | Multi-table JOINs                            | 🟢 Easy    | [View SQL](./LEET-07-product-sales-analysis-i.sql)                         |
-| 08 | Customers Who Visited Without Transactions       | Anti-JOIN & `IS NULL`                        | 🟢 Easy    | [View SQL](./LEET-08-customer-who-visited-without-transactions.sql)        |
-| 09 | Rising Temperature                               | Self-JOIN & `DATEDIFF()`                     | 🟢 Easy    | [View SQL](./LEET-09-rising-temperature.sql)                               |
-| 10 | Average Time of Process per Machine              | Aggregation & Grouping                       | 🟡 Medium  | [View SQL](./LEET-10-average-time-of-process-per-machine.sql)              |
-| 11 | Students and Examinations                        | `CROSS JOIN` & `LEFT JOIN`                   | 🟢 Easy    | [View SQL](./LEET-11-students-and-examinations.sql)                        |
-| 12 | Managers with at Least 5 Direct Reports          | Self-JOIN & `HAVING`                         | 🟡 Medium  | [View SQL](./LEET-12-managers-with-at-least-5-direct-reports.sql)          |
-| 14 | Confirmation Rate                                | `CASE WHEN` & Conditional Aggregation        | 🟡 Medium  | [View SQL](./LEET-14-confirmation-rate.sql)                                |
-| 15 | Not Boring Movies                                | Modulo & Sorting                             | 🟢 Easy    | [View SQL](./LEET-15-not-boring-movies.sql)                                |
-| 16 | Average Selling Price                            | JOINs, Date Ranges & NULL Handling           | 🟢 Easy    | [View SQL](./LEET-16-average-selling-price.sql)                            |
-| 17 | Project Employees I                              | JOINs, Aggregation & `AVG()`                 | 🟢 Easy    | [View SQL](./LEET-17-project-employees-i.sql)                              |
-| 18 | Percentage of Users Attended a Contest           | Aggregation, Subquery & `ROUND()`            | 🟢 Easy    | [View SQL](./LEET-18-percentage-of-users-attended-a-contest.sql)           |
-| 19 | Queries Quality and Percentage                   | Conditional Aggregation, `AVG()` & `ROUND()` | 🟢 Easy    | [View SQL](./LEET-19-queries-quality-and-percentage.sql)                   |
-| 20 | Monthly Transactions I                           | Conditional Aggregation & Date Grouping      | 🟢 Easy    | [View SQL](./LEET-20-monthly-transactions-i.sql)                           |
-| 21 | Immediate Food Delivery II                       | Aggregation, Subquery & `MIN()`              | 🟡 Medium  | [View SQL](./LEET-21-immediate-food-delivery-ii.sql)                       |
-| 22 | Game Play Analysis IV                            | CTE, `MIN()`, `DATEDIFF()` & `ROUND()`       | 🟡 Medium  | [View SQL](./LEET-22-game-play-analysis-iv.sql)                            |
-| 23 | Number of Unique Subjects Taught by Each Teacher | `COUNT(DISTINCT)` & `GROUP BY`               | 🟢 Easy    | [View SQL](./LEET-23-number-of-unique-subjects-taught-by-each-teacher.sql) |
-| 24 | User Activity for the Past 30 Days I             | Date Filtering & `COUNT(DISTINCT)`           | 🟢 Easy    | [View SQL](./LEET-24-daily-active-user-count.sql)                          |
-| 25 | Product Sales Analysis III                       | Window Functions & `MIN() OVER()`            | 🟡 Medium  | [View SQL](./LEET-25-first-year-sales.sql)                                 |
-| 26 | Classes More Than 5 Students                     | `GROUP BY`, `COUNT()` & `HAVING`             | 🟢 Easy    | [View SQL](./LEET-26-classes-more-than-5-students.sql)                     |
-| 27 | Find Followers Count                             | `COUNT()` & `GROUP BY`                       | 🟢 Easy    | [View SQL](./LEET-27-find-followers-count.sql)                             |
-| 28 | Biggest Single Number                            | `MAX()`, `GROUP BY` & Subquery               | 🟢 Easy    | [View SQL](./LEET-28-biggest-single-number.sql)                            |
-| 29 | Customers Who Bought All Products                | `COUNT(DISTINCT)`, `GROUP BY` & Subquery     | 🟡 Medium  | [View SQL](./LEET-29-customers-who-bought-all-products.sql)                |
-| 30 | Employees With Reports                           | CTE, Aggregation & Self-JOIN                 | 🟢 Easy    | [View SQL](./LEET-30-employees-with-reports.sql)                           |
+| #  | Problem                                          | Core Concept                                    | Difficulty | Solution                                                                   |
+| -- | ------------------------------------------------ | ----------------------------------------------- | ---------- | -------------------------------------------------------------------------- |
+| 01 | Recyclable and Low Fat Products                  | Filtering & Boolean Logic                       | 🟢 Easy    | [View SQL](./LEET-01-recyclable-and-low-fat-products.sql)                  |
+| 02 | Find Customer Referee                            | NULL Handling & 3VL                             | 🟢 Easy    | [View SQL](./LEET-02-find-customer-referee.sql)                            |
+| 03 | Big Countries                                    | Compound Predicates                             | 🟢 Easy    | [View SQL](./LEET-03-big-countries.sql)                                    |
+| 04 | Article Views I                                  | `DISTINCT` & Filtering                          | 🟢 Easy    | [View SQL](./LEET-04-article-views-i.sql)                                  |
+| 05 | Invalid Tweets                                   | `LEN()` & String Functions                      | 🟢 Easy    | [View SQL](./LEET-05-invalid-tweets.sql)                                   |
+| 06 | Replace Employee ID With Unique Identifier       | `LEFT JOIN`                                     | 🟢 Easy    | [View SQL](./LEET-06-replace-employee-id-with-unique-identifier.sql)       |
+| 07 | Product Sales Analysis I                         | Multi-table JOINs                               | 🟢 Easy    | [View SQL](./LEET-07-product-sales-analysis-i.sql)                         |
+| 08 | Customers Who Visited Without Transactions       | Anti-JOIN & `IS NULL`                           | 🟢 Easy    | [View SQL](./LEET-08-customer-who-visited-without-transactions.sql)        |
+| 09 | Rising Temperature                               | Self-JOIN & `DATEDIFF()`                        | 🟢 Easy    | [View SQL](./LEET-09-rising-temperature.sql)                               |
+| 10 | Average Time of Process per Machine              | Aggregation & Grouping                          | 🟡 Medium  | [View SQL](./LEET-10-average-time-of-process-per-machine.sql)              |
+| 11 | Students and Examinations                        | `CROSS JOIN` & `LEFT JOIN`                      | 🟢 Easy    | [View SQL](./LEET-11-students-and-examinations.sql)                        |
+| 12 | Managers with at Least 5 Direct Reports          | Self-JOIN & `HAVING`                            | 🟡 Medium  | [View SQL](./LEET-12-managers-with-at-least-5-direct-reports.sql)          |
+| 14 | Confirmation Rate                                | `CASE WHEN` & Conditional Aggregation           | 🟡 Medium  | [View SQL](./LEET-14-confirmation-rate.sql)                                |
+| 15 | Not Boring Movies                                | Modulo & Sorting                                | 🟢 Easy    | [View SQL](./LEET-15-not-boring-movies.sql)                                |
+| 16 | Average Selling Price                            | JOINs, Date Ranges & NULL Handling              | 🟢 Easy    | [View SQL](./LEET-16-average-selling-price.sql)                            |
+| 17 | Project Employees I                              | JOINs, Aggregation & `AVG()`                    | 🟢 Easy    | [View SQL](./LEET-17-project-employees-i.sql)                              |
+| 18 | Percentage of Users Attended a Contest           | Aggregation, Subquery & `ROUND()`               | 🟢 Easy    | [View SQL](./LEET-18-percentage-of-users-attended-a-contest.sql)           |
+| 19 | Queries Quality and Percentage                   | Conditional Aggregation, `AVG()` & `ROUND()`    | 🟢 Easy    | [View SQL](./LEET-19-queries-quality-and-percentage.sql)                   |
+| 20 | Monthly Transactions I                           | Conditional Aggregation & Date Grouping         | 🟢 Easy    | [View SQL](./LEET-20-monthly-transactions-i.sql)                           |
+| 21 | Immediate Food Delivery II                       | Aggregation, Subquery & `MIN()`                 | 🟡 Medium  | [View SQL](./LEET-21-immediate-food-delivery-ii.sql)                       |
+| 22 | Game Play Analysis IV                            | CTE, `MIN()`, `DATEDIFF()` & `ROUND()`          | 🟡 Medium  | [View SQL](./LEET-22-game-play-analysis-iv.sql)                            |
+| 23 | Number of Unique Subjects Taught by Each Teacher | `COUNT(DISTINCT)` & `GROUP BY`                  | 🟢 Easy    | [View SQL](./LEET-23-number-of-unique-subjects-taught-by-each-teacher.sql) |
+| 24 | User Activity for the Past 30 Days I             | Date Filtering & `COUNT(DISTINCT)`              | 🟢 Easy    | [View SQL](./LEET-24-daily-active-user-count.sql)                          |
+| 25 | Product Sales Analysis III                       | Window Functions & `MIN() OVER()`               | 🟡 Medium  | [View SQL](./LEET-25-first-year-sales.sql)                                 |
+| 26 | Classes More Than 5 Students                     | `GROUP BY`, `COUNT()` & `HAVING`                | 🟢 Easy    | [View SQL](./LEET-26-classes-more-than-5-students.sql)                     |
+| 27 | Find Followers Count                             | `COUNT()` & `GROUP BY`                          | 🟢 Easy    | [View SQL](./LEET-27-find-followers-count.sql)                             |
+| 28 | Biggest Single Number                            | `MAX()`, `GROUP BY` & Subquery                  | 🟢 Easy    | [View SQL](./LEET-28-biggest-single-number.sql)                            |
+| 29 | Customers Who Bought All Products                | `COUNT(DISTINCT)`, `GROUP BY` & Subquery        | 🟡 Medium  | [View SQL](./LEET-29-customers-who-bought-all-products.sql)                |
+| 30 | Employees With Reports                           | CTE, Aggregation & Self-JOIN                    | 🟢 Easy    | [View SQL](./LEET-30-employees-with-reports.sql)                           |
+| 31 | Primary Department for Each Employee             | `EXISTS` / `NOT EXISTS` & Correlated Subqueries | 🟡 Medium  | [View SQL](./LEET-31-primary-department-for-each-employee.sql)             |
+| 32 | Triangle Judgement                               | `CASE WHEN` & Conditional Logic                 | 🟢 Easy    | [View SQL](./LEET-32-triangle-judgement.sql)                               |
+| 33 | Consecutive Numbers                              | `LAG()` & Window Functions                      | 🟡 Medium  | [View SQL](./LEET-33-consecutive-numbers.sql)                              |
+| 34 | Product Price at a Given Date                    | CTE, `MAX()`, JOIN & `CASE WHEN`                | 🟡 Medium  | [View SQL](./LEET-34-product-price-at-a-given-date.sql)                    |
 
 > Problem 13 is intentionally skipped in the current pass and will be filled in during a later cleanup commit.
 
@@ -200,7 +208,7 @@ Each file follows the same pattern: a short comment block stating the problem an
 
 * **NULL handling isn't optional** — several early problems (e.g., Find Customer Referee) hinge entirely on correct 3-valued-logic reasoning; a naive `!=` predicate silently drops valid rows.
 * **JOIN choice changes correctness, not just performance** — anti-JOIN patterns (`LEFT JOIN ... WHERE right.id IS NULL`) are used deliberately instead of `NOT IN`, which breaks silently in the presence of NULLs on the subquery side.
-* **Self-joins as a stand-in for time-series comparison** — problems like Rising Temperature demonstrate a pattern used constantly in DE pipelines: comparing a row to "yesterday's" or "the previous period's" row without a dedicated lag table.
+* **Self-joins as a stand-in for time-series comparison** — problems like Rising Temperature demonstrate a pattern used constantly in DE pipelines: comparing a row to "yesterday's" or the "previous period's" row without a dedicated lag table.
 * **Conditional aggregation over multiple `CASE WHEN` passes** — used for computing rates/percentages (Confirmation Rate, Queries Quality) in a single scan rather than multiple correlated subqueries, which is closer to how these metrics would be computed in a warehouse aggregation layer.
 * **First-row-per-entity pattern** — Immediate Food Delivery II introduces a common analytical pattern: identifying the earliest record for each customer before calculating a metric over that subset.
 * **First-event retention logic** — Game Play Analysis IV introduces a common analytical pattern: identifying each player's first activity date, checking for activity on the immediately following day, and calculating a retention fraction across the full player population.
@@ -213,6 +221,10 @@ Each file follows the same pattern: a short comment block stating the problem an
 * **Relational division pattern** — Customers Who Bought All Products demonstrates comparing each customer's distinct product coverage against the complete product set to identify customers who satisfy an "all" requirement.
 * **Manager-level aggregation** — Employees With Reports demonstrates grouping employees by their direct manager, calculating report counts and average report age, then joining the aggregated result back to the employee table to retrieve the manager's identifying information.
 * **Integer aggregation and data types** — Employees With Reports also highlights an important SQL Server detail: `AVG()` over an integer column can produce integer behavior, so explicit casting is required when decimal precision must be preserved before rounding.
+* **Primary-selection logic** — Primary Department for Each Employee demonstrates handling "primary vs. only record" requirements using correlated `EXISTS` / `NOT EXISTS` logic while ensuring exactly one department is returned per employee.
+* **Boolean conditional logic** — Triangle Judgement demonstrates translating a mathematical condition into multiple SQL predicates combined with `CASE WHEN`.
+* **Consecutive-row detection** — Consecutive Numbers demonstrates using `LAG()` to compare the current row with previous rows and detect repeated values across consecutive records.
+* **Point-in-time pricing** — Product Price at a Given Date demonstrates selecting the latest effective record per product before a cutoff date, then falling back to an initial default value when no historical change exists.
 
 ---
 
@@ -220,7 +232,7 @@ Each file follows the same pattern: a short comment block stating the problem an
 
 **In progress**
 
-* [ ] Complete remaining LeetCode SQL 50 problems (20 remaining)
+* [ ] Complete remaining LeetCode SQL 50 problems (16 remaining)
 * [ ] Advanced window functions (framing, running totals, `NTILE`)
 * [ ] Deeper query optimization pass with execution-plan annotations per file
 
@@ -252,6 +264,6 @@ Every problem here is worked through the same chain: **Problem → Data Relation
 
 ⚡ *Building SQL Skills for Real Data Engineering Workflows* ⚡
 
-**30 / 50 • 60% Complete**
+**34 / 50 • 68% Complete**
 
 </div>
