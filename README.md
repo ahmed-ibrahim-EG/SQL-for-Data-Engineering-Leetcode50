@@ -18,12 +18,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/SQL%20Server-T--SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server">
-  <img src="https://img.shields.io/badge/LeetCode%2050-34%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
-  <img src="https://img.shields.io/badge/Progress-68%25-0ea5e9?style=for-the-badge" alt="Progress">
+  <img src="https://img.shields.io/badge/LeetCode%2050-38%20%2F%2050-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Progress">
+  <img src="https://img.shields.io/badge/Progress-76%25-0ea5e9?style=for-the-badge" alt="Progress">
   <img src="https://img.shields.io/badge/Status-Active-22c55e?style=for-the-badge" alt="Status">
-  <img src="https://img.shields.io/github/license/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="License">
-  <img src="https://img.shields.io/github/repo-size/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="Repo Size">
-  <img src="https://img.shields.io/github/stars/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab?style=for-the-badge" alt="Stars">
 </p>
 
 </div>
@@ -32,31 +29,34 @@
 
 ## 📌 Overview
 
-**SQL for Data Engineering Lab** is a repository dedicated entirely to solving the **LeetCode SQL 50** — all 50 problems, each treated as a self-contained engineering exercise rather than a throwaway answer. The goal for every problem is to understand *why* the query works and *where* the same pattern shows up in a real ETL or warehouse pipeline (deduplication, incremental loads, data quality checks, analytical windows).
+**SQL for Data Engineering Lab** is a repository dedicated entirely to solving the **LeetCode SQL 50** — all 50 problems, each treated as a self-contained engineering exercise rather than a throwaway answer.
 
-The repository doubles as a **query-pattern reference library**: every solution is stored as an independent, runnable `.sql` file, organized so a specific technique (a self-join, a correlated subquery, a window function) can be located and reused in seconds.
+The goal for every problem is to understand *why* the query works and *where* the same pattern appears in real Data Engineering workflows such as deduplication, incremental loads, data quality checks, aggregation, and analytical transformations.
+
+The repository also serves as a **query-pattern reference library**: every solution is stored as an independent, runnable `.sql` file, organized so a specific technique — such as a self-join, correlated subquery, CTE, or window function — can be located and reused quickly.
 
 ---
 
 ## 🎯 Key Highlights
 
-* **Pattern-first, not answer-first** — every solution maps back to a reusable Data Engineering technique (dedup logic, NULL-safe transforms, incremental aggregation, ranking/Top-N).
-* **Defensive SQL by default** — explicit `NULL` handling with `ISNULL()` / `COALESCE()`, careful use of `LEFT JOIN` vs. `INNER JOIN` to avoid silent row loss, and attention to three-valued logic (3VL) edge cases.
-* **SARGable, index-aware query writing** — queries are written to stay optimizer-friendly rather than relying on brute-force scans.
-* **One problem, one file** — a strict `LEET-XX-problem-name.sql` naming convention keeps the repo browsable and diff-friendly as it grows.
-* **Live progress tracking** — a maintained problem-by-problem table (concept, difficulty, link) doubles as a personal SQL competency map.
+* **Pattern-first, not answer-first** — every solution maps back to a reusable SQL / Data Engineering technique.
+* **Defensive SQL by default** — explicit `NULL` handling, careful JOIN selection, and attention to edge cases and three-valued logic.
+* **Window-function practice** — practical use of `LAG()`, `LEAD()`, `ROW_NUMBER()`, `MIN() OVER()` and cumulative calculations.
+* **One problem, one file** — a strict `LEET-XX-problem-name.sql` naming convention keeps the repository organized and easy to navigate.
+* **Problem-by-problem progress tracking** — every completed problem is documented with its main SQL concept and difficulty.
+* **Data Engineering perspective** — solutions focus not only on passing LeetCode but also on recognizing patterns applicable to ETL, ELT, analytics, and warehouse workloads.
 
 ---
 
 ## 🛠️ Tech Stack & Query Pipeline
 
-| Technology                              | Role                                                                                 |
-| --------------------------------------- | ------------------------------------------------------------------------------------ |
-| **Microsoft SQL Server**                | Database engine used to execute and validate every query                             |
-| **T-SQL**                               | Primary SQL dialect (window functions, CTEs, `ISNULL`/`COALESCE`, stored procedures) |
-| **SQL Server Management Studio (SSMS)** | Query authoring, execution plan inspection, index awareness                          |
-| **LeetCode SQL 50**                     | Source of structured, progressively harder problems                                  |
-| **Git & GitHub**                        | Version control, one commit per solved problem/documentation update                  |
+| Technology                              | Role                                                 |
+| --------------------------------------- | ---------------------------------------------------- |
+| **Microsoft SQL Server**                | Database engine used to execute and validate queries |
+| **T-SQL**                               | Primary SQL dialect                                  |
+| **SQL Server Management Studio (SSMS)** | Query authoring and execution                        |
+| **LeetCode SQL 50**                     | Source of structured SQL problems                    |
+| **Git & GitHub**                        | Version control and repository management            |
 
 **Conceptual flow — how each problem is worked:**
 
@@ -66,7 +66,7 @@ flowchart LR
     B --> C[Choose SQL Strategy<br/>JOIN / Subquery / CTE / Window Fn]
     C --> D[Write Defensive T-SQL<br/>NULL handling, edge cases]
     D --> E[Validate Result Set]
-    E --> F[Refactor for Readability<br/>& SARGability]
+    E --> F[Refactor for Readability]
     F --> G[(Commit as<br/>LEET-XX-problem-name.sql)]
 ```
 
@@ -101,10 +101,16 @@ SQL-for-Data-Engineering-Lab/
 ├── LEET-31-primary-department-for-each-employee.sql
 ├── LEET-32-triangle-judgement.sql
 ├── LEET-33-consecutive-numbers.sql
-└── LEET-34-product-price-at-a-given-date.sql
+├── LEET-34-product-price-at-a-given-date.sql
+├── LEET-35-last-person-to-fit-in-the-bus.sql
+├── LEET-36-count-salary-categories.sql
+├── LEET-37-employees-whose-manager-left-the-company.sql
+└── LEET-38-exchange-seats.sql
 ```
 
-**Naming convention:** `LEET-XX-problem-name.sql` — each LeetCode problem lives in its own independent, self-documenting file. No shared setup script; every file assumes LeetCode's standard schema/sample data for that problem, so files can be opened and run in isolation.
+**Naming convention:** `LEET-XX-problem-name.sql`
+
+Each LeetCode problem lives in its own independent SQL file. Every file can be opened and reviewed separately using the corresponding LeetCode schema.
 
 ---
 
@@ -112,56 +118,81 @@ SQL-for-Data-Engineering-Lab/
 
 ### Prerequisites
 
-* Microsoft SQL Server (2019+ recommended) or SQL Server Express
+* Microsoft SQL Server 2019+ or SQL Server Express
 * SQL Server Management Studio (SSMS) or Azure Data Studio
-* The relevant LeetCode problem's sample schema loaded (each `.sql` file's header comment lists which problem/table schema it targets)
+* The relevant LeetCode problem's sample schema
 
 ### Setup
 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/ahmed-ibrahim-EG/SQL-for-Data-Engineering-Lab.git
+
+# 2. Enter the repository
 cd SQL-for-Data-Engineering-Lab
 
-# 2. Open the repo folder in SSMS / Azure Data Studio
-#    (or open individual .sql files directly)
+# 3. Open the required .sql file in SSMS
 ```
 
-No package installation or environment variables are required — this is a pure T-SQL repository. Each script is written to run against the table schema defined by its corresponding LeetCode problem.
+No package installation or environment variables are required.
+
+Each SQL script assumes the standard table schema provided by its corresponding LeetCode problem.
 
 ---
 
 ## 💡 Usage & Examples
 
-Open any `LEET-XX-*.sql` file and run it against the matching sample tables. Example:
+Open any `LEET-XX-*.sql` file and run it against the matching sample tables.
 
-**`LEET-09-rising-temperature.sql`** — self-join on a date-shifted copy of the same table:
+### Example — Rising Temperature
+
+**`LEET-09-rising-temperature.sql`**
+
+Demonstrates a **self-join** for comparing a row with the previous day's record.
 
 ```sql
 SELECT w2.id
 FROM Weather w1
 JOIN Weather w2
-  ON DATEDIFF(DAY, w1.recordDate, w2.recordDate) = 1
+    ON DATEDIFF(DAY, w1.recordDate, w2.recordDate) = 1
 WHERE w2.temperature > w1.temperature;
 ```
 
-**Expected output:**
+### Example — Exchange Seats
 
-| id |
-| -- |
-| 2  |
-| 4  |
+**`LEET-38-exchange-seats.sql`**
 
-Each file follows the same pattern: a short comment block stating the problem and the core concept it demonstrates, followed by the query itself — no external dependencies, no fixtures beyond LeetCode's own sample data.
+Demonstrates `LAG()`, `LEAD()`, `CASE`, and handling an odd final row.
+
+```sql
+SELECT
+    id,
+    CASE
+        WHEN id % 2 = 1
+             AND id < (SELECT MAX(id) FROM Seat)
+            THEN LEAD(student) OVER (ORDER BY id)
+
+        WHEN id % 2 = 0
+            THEN LAG(student) OVER (ORDER BY id)
+
+        ELSE student
+    END AS student
+FROM Seat
+ORDER BY id;
+```
+
+Each file follows the same general structure:
+
+**Problem → SQL Logic → Query → Result**
 
 ---
 
 ## 📊 Progress Tracker
 
-**34 / 50 problems completed — 68%**
+**38 / 50 problems completed — 76%**
 
 ```text
-████████████████████████████████████████████████████  68%
+████████████████████████████████████████████████████████████  76%
 ```
 
 | #  | Problem                                          | Core Concept                                    | Difficulty | Solution                                                                   |
@@ -199,49 +230,50 @@ Each file follows the same pattern: a short comment block stating the problem an
 | 32 | Triangle Judgement                               | `CASE WHEN` & Conditional Logic                 | 🟢 Easy    | [View SQL](./LEET-32-triangle-judgement.sql)                               |
 | 33 | Consecutive Numbers                              | `LAG()` & Window Functions                      | 🟡 Medium  | [View SQL](./LEET-33-consecutive-numbers.sql)                              |
 | 34 | Product Price at a Given Date                    | CTE, `MAX()`, JOIN & `CASE WHEN`                | 🟡 Medium  | [View SQL](./LEET-34-product-price-at-a-given-date.sql)                    |
+| 35 | Last Person to Fit in the Bus                    | Cumulative `SUM()` & Window Functions           | 🟡 Medium  | [View SQL](./LEET-35-last-person-to-fit-in-the-bus.sql)                    |
+| 36 | Count Salary Categories                          | `CASE`, CTE, `LEFT JOIN` & `GROUP BY`           | 🟢 Easy    | [View SQL](./LEET-36-count-salary-categories.sql)                          |
+| 37 | Employees Whose Manager Left the Company         | Subquery & `NOT IN`                             | 🟢 Easy    | [View SQL](./LEET-37-employees-whose-manager-left-the-company.sql)         |
+| 38 | Exchange Seats                                   | `LAG()`, `LEAD()` & `CASE`                      | 🟡 Medium  | [View SQL](./LEET-38-exchange-seats.sql)                                   |
 
-> Problem 13 is intentionally skipped in the current pass and will be filled in during a later cleanup commit.
+> **Problem 13** is intentionally skipped in the current pass and will be filled in during a later cleanup commit.
 
 ---
 
 ## 🧠 Engineering Notes & Key Learnings
 
-* **NULL handling isn't optional** — several early problems (e.g., Find Customer Referee) hinge entirely on correct 3-valued-logic reasoning; a naive `!=` predicate silently drops valid rows.
-* **JOIN choice changes correctness, not just performance** — anti-JOIN patterns (`LEFT JOIN ... WHERE right.id IS NULL`) are used deliberately instead of `NOT IN`, which breaks silently in the presence of NULLs on the subquery side.
-* **Self-joins as a stand-in for time-series comparison** — problems like Rising Temperature demonstrate a pattern used constantly in DE pipelines: comparing a row to "yesterday's" or the "previous period's" row without a dedicated lag table.
-* **Conditional aggregation over multiple `CASE WHEN` passes** — used for computing rates/percentages (Confirmation Rate, Queries Quality) in a single scan rather than multiple correlated subqueries, which is closer to how these metrics would be computed in a warehouse aggregation layer.
-* **First-row-per-entity pattern** — Immediate Food Delivery II introduces a common analytical pattern: identifying the earliest record for each customer before calculating a metric over that subset.
-* **First-event retention logic** — Game Play Analysis IV introduces a common analytical pattern: identifying each player's first activity date, checking for activity on the immediately following day, and calculating a retention fraction across the full player population.
-* **Distinct counting at the entity level** — Number of Unique Subjects Taught by Each Teacher demonstrates how `COUNT(DISTINCT ...)` prevents duplicate relationships from inflating entity-level metrics.
-* **Daily active-user aggregation** — User Activity for the Past 30 Days I demonstrates combining date-range filtering with `COUNT(DISTINCT user_id)` to calculate daily activity metrics while ignoring duplicate activity rows.
-* **Window functions for first-year analysis** — Product Sales Analysis III demonstrates using `MIN() OVER (PARTITION BY ...)` to attach each product's earliest year to every related row before filtering for first-year sales.
-* **Threshold-based aggregation** — Classes More Than 5 Students demonstrates using `GROUP BY`, `COUNT()`, and `HAVING` to filter entities based on aggregated row counts.
-* **Entity-level counting** — Find Followers Count demonstrates aggregating relationship records at the user level to calculate the number of followers per user.
-* **Single-occurrence filtering** — Biggest Single Number demonstrates grouping duplicated values, filtering for values that occur exactly once, and then applying an aggregate to find the largest qualifying value.
-* **Relational division pattern** — Customers Who Bought All Products demonstrates comparing each customer's distinct product coverage against the complete product set to identify customers who satisfy an "all" requirement.
-* **Manager-level aggregation** — Employees With Reports demonstrates grouping employees by their direct manager, calculating report counts and average report age, then joining the aggregated result back to the employee table to retrieve the manager's identifying information.
-* **Integer aggregation and data types** — Employees With Reports also highlights an important SQL Server detail: `AVG()` over an integer column can produce integer behavior, so explicit casting is required when decimal precision must be preserved before rounding.
-* **Primary-selection logic** — Primary Department for Each Employee demonstrates handling "primary vs. only record" requirements using correlated `EXISTS` / `NOT EXISTS` logic while ensuring exactly one department is returned per employee.
-* **Boolean conditional logic** — Triangle Judgement demonstrates translating a mathematical condition into multiple SQL predicates combined with `CASE WHEN`.
-* **Consecutive-row detection** — Consecutive Numbers demonstrates using `LAG()` to compare the current row with previous rows and detect repeated values across consecutive records.
-* **Point-in-time pricing** — Product Price at a Given Date demonstrates selecting the latest effective record per product before a cutoff date, then falling back to an initial default value when no historical change exists.
+* **NULL handling isn't optional** — correct SQL often depends on understanding three-valued logic and how `NULL` affects predicates.
+* **JOIN choice affects correctness** — `LEFT JOIN`, `INNER JOIN`, and anti-join patterns can produce fundamentally different result sets.
+* **Self-joins enable row-to-row comparisons** — useful for time-series analysis and comparing related records.
+* **Conditional aggregation** — `CASE WHEN` combined with aggregate functions is useful for building metrics and categorical summaries.
+* **First-row-per-entity pattern** — identifying the earliest record for each entity is a common warehouse and analytics requirement.
+* **Distinct counting at the entity level** — `COUNT(DISTINCT ...)` prevents duplicate relationships from inflating metrics.
+* **Relational division** — comparing entity coverage against a complete reference set solves "all" requirements.
+* **Correlated subqueries** — `EXISTS` / `NOT EXISTS` can express entity-specific conditions without unnecessary joins.
+* **Consecutive-row detection** — `LAG()` provides a clean way to compare the current row with previous records.
+* **Point-in-time logic** — selecting the latest effective record before a cutoff date is a common pattern in historical and warehouse data.
+* **Cumulative window calculations** — running `SUM()` can model progressive totals and threshold-based decisions.
+* **Category completeness** — generating a fixed set of categories and using `LEFT JOIN` ensures required categories remain visible even when their count is zero.
+* **Missing-reference detection** — subqueries can identify records referencing entities that no longer exist.
+* **Row swapping with window functions** — `LAG()` and `LEAD()` can transform row relationships while preserving the original row identifiers.
 
 ---
 
 ## 🔭 Roadmap
 
-**In progress**
+### In Progress
 
-* [ ] Complete remaining LeetCode SQL 50 problems (16 remaining)
-* [ ] Advanced window functions (framing, running totals, `NTILE`)
-* [ ] Deeper query optimization pass with execution-plan annotations per file
+* [ ] Complete the remaining **12 LeetCode SQL 50 problems**
+* [ ] Continue practicing advanced window-function patterns
+* [ ] Review edge cases involving `NULL`, duplicates, and missing relationships
 
-**Next**
+### Next
 
+* [ ] Advanced window functions — framing, running totals, `NTILE()`
+* [ ] Query optimization and execution-plan analysis
 * [ ] Production-style SQL project: staging → transformation → warehouse workflow
 * [ ] Star schema implementation exercise
-* [ ] SQL + Python ETL integration (this repo's patterns feeding a pandas/pyodbc pipeline)
-* [ ] Formal data-validation query library (reusable quality-check templates)
+* [ ] SQL + Python ETL integration
+* [ ] Reusable SQL data-validation query library
 
 ---
 
@@ -249,7 +281,11 @@ Each file follows the same pattern: a short comment block stating the problem an
 
 > Don't just solve the query — understand *why* it works.
 
-Every problem here is worked through the same chain: **Problem → Data Relationships → SQL Logic → Query → Result**, with the explicit goal of building SQL judgment that transfers directly into real Data Engineering pipelines, not just LeetCode point-scoring.
+Every problem is approached through the same chain:
+
+**Problem → Data Relationships → SQL Logic → Query → Result**
+
+The goal is not simply to collect LeetCode solutions, but to build SQL judgment that transfers into real **Data Engineering**, **ETL**, **ELT**, **Analytics**, and **Data Warehouse** workflows.
 
 ---
 
@@ -258,12 +294,13 @@ Every problem here is worked through the same chain: **Problem → Data Relation
 **Ahmed Ibrahim** — CS Student & Aspiring Data Engineer
 
 [![GitHub](https://img.shields.io/badge/GitHub-ahmed--ibrahim--EG-181717?style=flat-square\&logo=github\&logoColor=white)](https://github.com/ahmed-ibrahim-EG)
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Ahmed%20Ibrahim-0A66C2?style=flat-square\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/ahmed-ibrahim-36600b2a5)
 
 <div align="center">
 
 ⚡ *Building SQL Skills for Real Data Engineering Workflows* ⚡
 
-**34 / 50 • 68% Complete**
+**38 / 50 • 76% Complete**
 
 </div>
