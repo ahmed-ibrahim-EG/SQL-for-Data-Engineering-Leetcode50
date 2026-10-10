@@ -14,8 +14,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/SQL%20Server-T--SQL-red?style=for-the-badge&logo=microsoftsqlserver" alt="SQL Server">
-  <img src="https://img.shields.io/badge/LeetCode-39%20%2F%2050-orange?style=for-the-badge&logo=leetcode" alt="LeetCode Progress">
-  <img src="https://img.shields.io/badge/Progress-78%25-brightgreen?style=for-the-badge" alt="Progress">
+  <img src="https://img.shields.io/badge/LeetCode-40%20%2F%2050-orange?style=for-the-badge&logo=leetcode" alt="LeetCode Progress">
+  <img src="https://img.shields.io/badge/Progress-80%25-brightgreen?style=for-the-badge" alt="Progress">
 </p>
 
 </div>
@@ -74,7 +74,8 @@ SQL-for-Data-Engineering-Lab/
 ├── LEET-03-big-countries.sql
 ├── ...
 ├── LEET-38-exchange-seats.sql
-└── LEET-39-movie-rating.sql
+├── LEET-39-movie-rating.sql
+└── LEET-40-friend-requests-ii-who-has-the-most-friends.sql
 ```
 
 Each SQL file contains:
@@ -88,10 +89,10 @@ The solutions are written independently so that each file can be reviewed and pr
 
 ## 📊 Progress
 
-**39 / 50 problems completed — 78%**
+**40 / 50 problems completed — 80%**
 
 ```text
-Progress: ███████████████████████████████████████░░░░░░░░░░░ 78%
+Progress: █████████████████████████████████████████░░░░░░░░░░ 80%
 ```
 
 ### Problem Tracking
@@ -136,6 +137,7 @@ Progress: ███████████████████████�
 | 37 | [Existing Problem 37] | [Existing Concepts] | [Existing Difficulty] | [View SQL](./LEET-37-[existing-file-name].sql) |
 | 38 | Exchange Seats | CASE, Conditional Logic | 🟡 Medium | [View SQL](./LEET-38-exchange-seats.sql) |
 | 39 | Movie Rating | CTEs, Aggregation, Date Filtering & UNION ALL | 🟡 Medium | [View SQL](./LEET-39-movie-rating.sql) |
+| 40 | Friend Requests II: Who Has the Most Friends | UNION ALL, Aggregation, GROUP BY & MAX | 🟡 Medium | [View SQL](./LEET-40-friend-requests-ii-who-has-the-most-friends.sql) |
 
 ## 📝 Engineering Notes
 
@@ -147,8 +149,8 @@ Progress: ███████████████████████�
 
 ## 🚀 Roadmap
 
-- [x] Complete the first 39 selected SQL problems.
-- [ ] Solve the remaining 11 selected problems.
+- [x] Complete the first 40 selected SQL problems.
+- [ ] Solve the remaining 10 selected problems.
 - [ ] Review and consolidate recurring SQL patterns.
 - [ ] Practice explaining the logic behind each solution.
 - [ ] Continue applying SQL concepts to Data Engineering projects.
@@ -168,7 +170,7 @@ This repository is a personal learning project documenting practical SQL problem
 
 <div align="center">
 
-**39 / 50 • 78% Complete**
+**40 / 50 • 80% Complete**
 
 *Building practical SQL foundations for Data Engineering, one problem at a time.*
 
