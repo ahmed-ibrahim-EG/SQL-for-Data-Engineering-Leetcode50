@@ -1,78 +1,62 @@
 /*
 ===============================================================================
-Task: LeetCode #1341 - Movie Rating
+Task: LeetCode #1321 - Restaurant Growth
 Dialect: Microsoft SQL Server (T-SQL)
-Category: Aggregation, CTEs & Sorting
+Category: Aggregation, CTEs & Window Functions
 Difficulty: Medium
-URL: https://leetcode.com/problems/movie-rating/
+URL: https://leetcode.com/problems/restaurant-growth/
 
 Problem Statement:
-    1. Find the user who rated the greatest number of movies.
-       If there is a tie, return the lexicographically smaller user name.
+    Calculate the 7-day moving total and average of customer payments.
+    The window includes the current day and the 6 days before it.
 
-    2. Find the movie with the highest average rating in February 2020.
-       If there is a tie, return the lexicographically smaller movie title.
-
-    3. Return both results in a single column named results.
+    1. Calculate the total amount paid by customers for each day.
+    2. Calculate the moving total over a 7-day window.
+    3. Calculate the average amount over the same 7-day window.
+    4. Return only dates with a complete 7-day window.
+    5. Round average_amount to two decimal places.
+    6. Return the result ordered by visited_on in ascending order.
 
 Schema:
-    Movies:
-        movie_id INT (Primary Key)
-        title VARCHAR (Unique)
-
-    Users:
-        user_id INT (Primary Key)
-        name VARCHAR (Unique)
-
-    MovieRating:
-        movie_id INT
-        user_id INT
-        rating INT
-        created_at DATE
-        Primary Key: (movie_id, user_id)
+    Customer:
+        customer_id INT
+        name VARCHAR
+        visited_on DATE
+        amount INT
+        Primary Key: (customer_id, visited_on)
 ===============================================================================
 */
 
 -- Solution Query:
 
-WITH UserRatingCounts AS (
+WITH DailyTotals AS (
     SELECT
-        user_id,
-        COUNT(*) AS rating_count
-    FROM MovieRating
-    GROUP BY user_id
+        visited_on,
+        SUM(amount) AS daily_amount
+    FROM Customer
+    GROUP BY visited_on
 ),
-MovieAverageRatings AS (
+MovingTotals AS (
     SELECT
-        movie_id,
-        AVG(CAST(rating AS DECIMAL(10, 2))) AS avg_rating
-    FROM MovieRating
-    WHERE created_at >= '2020-02-01'
-      AND created_at <  '2020-03-01'
-    GROUP BY movie_id
+        visited_on,
+        SUM(daily_amount) OVER (
+            ORDER BY visited_on
+            ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+        ) AS amount,
+        COUNT(*) OVER (
+            ORDER BY visited_on
+            ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+        ) AS days_count
+    FROM DailyTotals
 )
-SELECT results
-FROM (
-    SELECT TOP (1)
-        u.name AS results
-    FROM UserRatingCounts AS urc
-    INNER JOIN Users AS u
-        ON urc.user_id = u.user_id
-    ORDER BY
-        urc.rating_count DESC,
-        u.name ASC
-) AS BestUser
-
-UNION ALL
-
-SELECT results
-FROM (
-    SELECT TOP (1)
-        m.title AS results
-    FROM MovieAverageRatings AS mar
-    INNER JOIN Movies AS m
-        ON mar.movie_id = m.movie_id
-    ORDER BY
-        mar.avg_rating DESC,
-        m.title ASC
-) AS BestMovie;
+SELECT
+    visited_on,
+    amount,
+    CAST(
+        ROUND(amount / 7.0, 2)
+        AS DECIMAL(10, 2)
+    ) AS average_amount
+FROM MovingTotals
+WHERE days_count = 7
+ORDER BY visited_on ASC;
+```
