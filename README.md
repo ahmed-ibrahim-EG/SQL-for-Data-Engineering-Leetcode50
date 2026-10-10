@@ -73,13 +73,16 @@ SQL-for-Data-Engineering-Lab/
 ├── LEET-02-find-customer-referee.sql
 ├── LEET-03-big-countries.sql
 ├── ...
+├── LEET-34-product-price-at-a-given-date.sql
+├── LEET-35-last-person-to-fit-in-the-bus.sql
+├── LEET-36-count-salary-categories.sql
+├── LEET-37-employees-whose-manager-left-the-company.sql
 ├── LEET-38-exchange-seats.sql
 ├── LEET-39-movie-rating.sql
 └── LEET-40-friend-requests-ii-who-has-the-most-friends.sql
 ```
 
 Each SQL file contains:
-
 - Problem title and LeetCode reference
 - Problem statement
 - Table schema
@@ -132,9 +135,9 @@ Progress: ███████████████████████�
 | 32 | Triangle Judgement | CASE, Conditional Logic | 🟢 Easy | [View SQL](./LEET-32-triangle-judgement.sql) |
 | 33 | Consecutive Available Seats | Self-Join, Filtering | 🟢 Easy | [View SQL](./LEET-33-consecutive-available-seats.sql) |
 | 34 | Product Price at a Given Date | CTEs, Window Functions | 🟡 Medium | [View SQL](./LEET-34-product-price-at-a-given-date.sql) |
-| 35 | [Existing Problem 35] | [Existing Concepts] | [Existing Difficulty] | [View SQL](./LEET-35-[existing-file-name].sql) |
-| 36 | [Existing Problem 36] | [Existing Concepts] | [Existing Difficulty] | [View SQL](./LEET-36-[existing-file-name].sql) |
-| 37 | [Existing Problem 37] | [Existing Concepts] | [Existing Difficulty] | [View SQL](./LEET-37-[existing-file-name].sql) |
+| 35 | Last Person to Fit in the Bus | Cumulative `SUM()` & Window Functions | 🟡 Medium | [View SQL](./LEET-35-last-person-to-fit-in-the-bus.sql) |
+| 36 | Count Salary Categories | `CASE`, CTE, `LEFT JOIN` & `GROUP BY` | 🟢 Easy | [View SQL](./LEET-36-count-salary-categories.sql) |
+| 37 | Employees Whose Manager Left the Company | Subquery & `NOT IN` | 🟢 Easy | [View SQL](./LEET-37-employees-whose-manager-left-the-company.sql) |
 | 38 | Exchange Seats | CASE, Conditional Logic | 🟡 Medium | [View SQL](./LEET-38-exchange-seats.sql) |
 | 39 | Movie Rating | CTEs, Aggregation, Date Filtering & UNION ALL | 🟡 Medium | [View SQL](./LEET-39-movie-rating.sql) |
 | 40 | Friend Requests II: Who Has the Most Friends | UNION ALL, Aggregation, GROUP BY & MAX | 🟡 Medium | [View SQL](./LEET-40-friend-requests-ii-who-has-the-most-friends.sql) |
