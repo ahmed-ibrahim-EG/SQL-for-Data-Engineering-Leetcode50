@@ -1,22 +1,22 @@
  <div align="center">
 
-# ⚡ Data Engineering SQL Patterns
+# ⚡ SQL for Data Engineering Lab
 
-### *Practical SQL Patterns for Data Engineering, Analytics & Data Transformation*
+### *Practical SQL Problem Solving for Data Engineering*
 
-<p align="center">
-  <a href="#-overview">Overview</a> •
-  <a href="#-objectives">Objectives</a> •
-  <a href="#-sql-patterns">SQL Patterns</a> •
-  <a href="#-repository-structure">Repository Structure</a> •
-  <a href="#-progress">Progress</a>
+<p>
+  <img src="https://img.shields.io/badge/SQL-Server-blue?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server" />
+  <img src="https://img.shields.io/badge/LeetCode-Practice-orange?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Practice" />
+  <img src="https://img.shields.io/badge/Progress-41%2F50-success?style=for-the-badge" alt="Progress 41 of 50" />
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/SQL%20Server-T--SQL-red?style=for-the-badge&logo=microsoftsqlserver" alt="SQL Server">
-  <img src="https://img.shields.io/badge/LeetCode-41%20%2F%2050-orange?style=for-the-badge&logo=leetcode" alt="LeetCode Progress">
-  <img src="https://img.shields.io/badge/Progress-82%25-brightgreen?style=for-the-badge" alt="Progress">
-</p>
+**A practical collection of SQL solutions focused on analytical thinking, query logic, and real-world Data Engineering patterns.**
+
+[Overview](#-overview) •
+[Progress](#-progress) •
+[Solutions](#-sql-solutions) •
+[Concepts](#-sql-concepts-practiced) •
+[Author](#-author)
 
 </div>
 
@@ -24,160 +24,171 @@
 
 ## 📌 Overview
 
-This repository documents my journey through **50 selected SQL problems** focused on developing practical SQL skills for Data Engineering.
+This repository documents my journey of improving SQL problem-solving skills through practical exercises and structured solutions.
 
-The goal is not just to solve problems, but to understand reusable SQL patterns used in:
+The focus is not just on writing queries, but also on understanding requirements, choosing appropriate SQL patterns, handling edge cases, and developing the analytical thinking needed for Data Engineering.
 
-- Data transformation
-- Data cleaning
-- Analytical queries
-- Relational data processing
-- Reporting and aggregation
-- Data quality checks
+Each solution is maintained as a separate `.sql` file in the repository root for easy access and review.
 
-All solutions are written using **Microsoft SQL Server (T-SQL)**.
+### 🎯 Objectives
 
-## 🎯 Objectives
-
-- Strengthen SQL problem-solving skills.
-- Practice common SQL patterns used in Data Engineering.
-- Improve understanding of joins, aggregations, subqueries, CTEs, and window functions.
-- Build practical experience with analytical SQL.
-- Maintain a structured collection of self-contained SQL solutions.
-- Prepare for SQL technical interviews for entry-level Data Engineering roles.
-
-## 🧠 SQL Patterns
-
-The repository covers the following concepts:
-
-| Category | Concepts |
-|---|---|
-| Filtering & Sorting | `WHERE`, `ORDER BY`, `DISTINCT`, `TOP` |
-| Aggregation | `GROUP BY`, `HAVING`, `COUNT`, `SUM`, `AVG` |
-| Joins | `INNER JOIN`, `LEFT JOIN`, self-joins |
-| Subqueries | Scalar subqueries, multi-row subqueries, correlated subqueries |
-| CTEs | Common Table Expressions |
-| Window Functions | `ROW_NUMBER`, `RANK`, `LAG`, `PARTITION BY` |
-| Conditional Logic | `CASE WHEN` |
-| Date Operations | Date filtering, date-based grouping |
-| Set Operations | `UNION ALL` |
-| Existence Checks | `EXISTS`, `NOT EXISTS` |
-| Data Transformation | Conditional transformations and derived values |
-
-## 📁 Repository Structure
-
-```text
-SQL-for-Data-Engineering-Lab/
-│
-├── LEET-01-recyclable-and-low-fat-products.sql
-├── LEET-02-find-customer-referee.sql
-├── LEET-03-big-countries.sql
-├── ...
-├── LEET-34-product-price-at-a-given-date.sql
-├── LEET-35-last-person-to-fit-in-the-bus.sql
-├── LEET-36-count-salary-categories.sql
-├── LEET-37-employees-whose-manager-left-the-company.sql
-├── LEET-38-exchange-seats.sql
-├── LEET-39-movie-rating.sql
-├── LEET-40-friend-requests-ii-who-has-the-most-friends.sql
-└── LEET-41-investment-in-2016.sql
-```
-
-Each SQL file contains:
-
-- Problem title and LeetCode reference
-- Problem statement
-- Table schema
-- SQL solution
-
-The solutions are written independently so that each file can be reviewed and practiced on its own.
+- Strengthen SQL fundamentals and query-writing skills.
+- Improve logical thinking and problem decomposition.
+- Practice aggregations, joins, subqueries, and window functions.
+- Handle NULL values, duplicates, and edge cases correctly.
+- Build a foundation for data transformation and analytical workloads.
+- Maintain a documented, version-controlled SQL portfolio.
 
 ## 📊 Progress
 
-**41 / 50 problems completed — 82%**
+| Metric | Status |
+|---|---:|
+| Completed problems | 41 |
+| Target problems | 50 |
+| Completion rate | 82% |
+| Remaining problems | 9 |
+| SQL environment | Microsoft SQL Server |
+| Repository format | Individual `.sql` files |
 
-```text
-Progress: █████████████████████████████████████████░░░░░░░░░ 82%
-```
+**Current progress: 41/50 problems completed (82%).**
 
-### Problem Tracking
+## 🗂️ SQL Solutions
 
-| # | Problem | Core Concepts | Difficulty | Solution |
-|---:|---|---|---|---|
-| 01 | Recyclable and Low Fat Products | Filtering | 🟢 Easy | [View SQL](./LEET-01-recyclable-and-low-fat-products.sql) |
-| 02 | Find Customer Referee | NULL Handling, Filtering | 🟢 Easy | [View SQL](./LEET-02-find-customer-referee.sql) |
-| 03 | Big Countries | Filtering, OR | 🟢 Easy | [View SQL](./LEET-03-big-countries.sql) |
-| 04 | Article Views I | DISTINCT, Filtering | 🟢 Easy | [View SQL](./LEET-04-article-views-i.sql) |
-| 05 | Invalid Tweets | String Functions, Filtering | 🟢 Easy | [View SQL](./LEET-05-invalid-tweets.sql) |
-| 06 | Replace Employee ID With The Unique Identifier | LEFT JOIN | 🟢 Easy | [View SQL](./LEET-06-replace-employee-id-with-the-unique-identifier.sql) |
-| 07 | Product Sales Analysis I | LEFT JOIN | 🟢 Easy | [View SQL](./LEET-07-product-sales-analysis-i.sql) |
-| 08 | Customer Who Visited but Did Not Make Any Transactions | LEFT JOIN, Aggregation | 🟢 Easy | [View SQL](./LEET-08-customer-who-visited-but-did-not-make-any-transactions.sql) |
-| 09 | Rising Temperature | Self-Join, Date Operations | 🟢 Easy | [View SQL](./LEET-09-rising-temperature.sql) |
-| 10 | Average Time of Process per Machine | Aggregation, CASE | 🟢 Easy | [View SQL](./LEET-10-average-time-of-process-per-machine.sql) |
-| 11 | Employee Bonus | LEFT JOIN, Filtering | 🟢 Easy | [View SQL](./LEET-11-employee-bonus.sql) |
-| 12 | Students and Examinations | CROSS JOIN, LEFT JOIN, Aggregation | 🟢 Easy | [View SQL](./LEET-12-students-and-examinations.sql) |
-| 14 | Not Boring Movies | Filtering, Modulo, Sorting | 🟢 Easy | [View SQL](./LEET-14-not-boring-movies.sql) |
-| 15 | Average Selling Price | LEFT JOIN, Aggregation | 🟢 Easy | [View SQL](./LEET-15-average-selling-price.sql) |
-| 16 | Project Employees I | INNER JOIN, Aggregation | 🟢 Easy | [View SQL](./LEET-16-project-employees-i.sql) |
-| 17 | Percentage of Users Attended a Contest | Aggregation, Arithmetic | 🟢 Easy | [View SQL](./LEET-17-percentage-of-users-attended-a-contest.sql) |
-| 18 | Queries Quality and Percentage | Aggregation, CASE | 🟢 Easy | [View SQL](./LEET-18-queries-quality-and-percentage.sql) |
-| 19 | Monthly Transactions I | Aggregation, Date Functions | 🟡 Medium | [View SQL](./LEET-19-monthly-transactions-i.sql) |
-| 20 | Immediate Food Delivery II | Subqueries, Aggregation | 🟡 Medium | [View SQL](./LEET-20-immediate-food-delivery-ii.sql) |
-| 21 | Game Play Analysis IV | CTEs, Date Operations | 🟡 Medium | [View SQL](./LEET-21-game-play-analysis-iv.sql) |
-| 22 | Number of Unique Subjects Taught by Each Teacher | Aggregation, DISTINCT | 🟢 Easy | [View SQL](./LEET-22-number-of-unique-subjects-taught-by-each-teacher.sql) |
-| 23 | User Activity for the Past 30 Days I | Date Filtering, Aggregation | 🟢 Easy | [View SQL](./LEET-23-user-activity-for-the-past-30-days-i.sql) |
-| 24 | Product Sales Analysis III | CTEs, Window Functions | 🟡 Medium | [View SQL](./LEET-24-product-sales-analysis-iii.sql) |
-| 25 | Classes More Than 5 Students | GROUP BY, HAVING | 🟢 Easy | [View SQL](./LEET-25-classes-more-than-5-students.sql) |
-| 26 | Find Followers Count | Aggregation | 🟢 Easy | [View SQL](./LEET-26-find-followers-count.sql) |
-| 27 | Biggest Single Number | Aggregation, Subqueries | 🟢 Easy | [View SQL](./LEET-27-biggest-single-number.sql) |
-| 28 | Customers Who Bought All Products | Aggregation, HAVING | 🟡 Medium | [View SQL](./LEET-28-customers-who-bought-all-products.sql) |
-| 29 | The Number of Employees Which Report to Each Employee | Self-Join, Aggregation | 🟡 Medium | [View SQL](./LEET-29-the-number-of-employees-which-report-to-each-employee.sql) |
-| 30 | Employees With Reports | Self-Join, Aggregation | 🟡 Medium | [View SQL](./LEET-30-employees-with-reports.sql) |
-| 31 | Primary Department for Each Employee | Window Functions, Filtering | 🟡 Medium | [View SQL](./LEET-31-primary-department-for-each-employee.sql) |
-| 32 | Triangle Judgement | CASE, Conditional Logic | 🟢 Easy | [View SQL](./LEET-32-triangle-judgement.sql) |
-| 33 | Consecutive Available Seats | Self-Join, Filtering | 🟢 Easy | [View SQL](./LEET-33-consecutive-available-seats.sql) |
-| 34 | Product Price at a Given Date | CTEs, Window Functions | 🟡 Medium | [View SQL](./LEET-34-product-price-at-a-given-date.sql) |
-| 35 | Last Person to Fit in the Bus | Cumulative `SUM()` & Window Functions | 🟡 Medium | [View SQL](./LEET-35-last-person-to-fit-in-the-bus.sql) |
-| 36 | Count Salary Categories | `CASE`, CTE, `LEFT JOIN` & `GROUP BY` | 🟢 Easy | [View SQL](./LEET-36-count-salary-categories.sql) |
-| 37 | Employees Whose Manager Left the Company | Subquery & `NOT IN` | 🟢 Easy | [View SQL](./LEET-37-employees-whose-manager-left-the-company.sql) |
-| 38 | Exchange Seats | CASE, Conditional Logic | 🟡 Medium | [View SQL](./LEET-38-exchange-seats.sql) |
-| 39 | Movie Rating | CTEs, Aggregation, Date Filtering & UNION ALL | 🟡 Medium | [View SQL](./LEET-39-movie-rating.sql) |
-| 40 | Friend Requests II: Who Has the Most Friends | UNION ALL, Aggregation, GROUP BY & MAX | 🟡 Medium | [View SQL](./LEET-40-friend-requests-ii-who-has-the-most-friends.sql) |
-| 41 | Investments in 2016 | Aggregation, `GROUP BY`, `HAVING`, Conditional Filtering | 🟡 Medium | [View SQL](./LEET-41-investment-in-2016.sql) |
+The table below follows the actual filenames in the repository.
 
-## 📝 Engineering Notes
+| # | Problem | SQL Solution |
+|---:|---|---|
+| 01 | Recyclable and Low Fat Products | [View SQL](./LEET-01-recyclable-and-low-fat-products.sql) |
+| 02 | Find Customer Referee | [View SQL](./LEET-02-find-customer-referee.sql) |
+| 03 | Big Countries | [View SQL](./LEET-03-Big%20-Countries.sql) |
+| 04 | Find Customer Referee | [View SQL](./LEET-04-find-customer-referee.sql) |
+| 05 | Invalid Tweets | [View SQL](./LEET-05-invalid-tweets.sql) |
+| 06 | Replace Employee ID With the Unique Identifier | [View SQL](./LEET-06-replace-employee-id-with-the-unique-identifier.sql) |
+| 07 | Product Sales Analysis I | [View SQL](./LEET-07-product-sales-analysis-i.sql) |
+| 08 | Customer Who Visited Without Making Any Transactions | [View SQL](./LEET-08-customer-who-visited-without-making-any-transactions.sql) |
+| 09 | Rising Temperature | [View SQL](./LEET-09-rising-temperature.sql) |
+| 10 | Average Time of Process per Machine | [View SQL](./LEET-10-average-time-of-process-per-machine.sql) |
+| 11 | Employee Bonus | [View SQL](./LEET-11-employee-bonus.sql) |
+| 12 | Managers With at Least 5 Direct Reports | [View SQL](./LEET-12-managers-with-at-least-5-direct-reports.sql) |
+| 13 | Students and Examinations | [View SQL](./LEET-13-students-and-examinations.sql) |
+| 14 | Confirmation Rate | [View SQL](./LEET-14-confirmation-rate.sql) |
+| 15 | Not Boring Movies | [View SQL](./LEET-15-not-boring-movies.sql) |
+| 16 | Average Selling Price | [View SQL](./LEET-16-average-selling-price.sql) |
+| 17 | Project Employees I | [View SQL](./LEET-17-project-employees-i.sql) |
+| 18 | Percentage of Users Attended a Contest | [View SQL](./LEET-18-Percentage-of-Users-Attended-a-Contest.sql) |
+| 19 | Queries Quality and Percentage | [View SQL](./LEET-19-queries-quality-and-percentage.sql) |
+| 20 | Monthly Transactions I | [View SQL](./LEET-20-Monthly-Transactions-I.sql) |
+| 21 | Immediate Food Delivery II | [View SQL](./LEET-21-immediate-food-delivery-ii.sql) |
+| 22 | Game Play Analysis IV | [View SQL](./LEET-22-game-play-analysis-iv.sql) |
+| 23 | Number of Unique Subjects Taught by Each Teacher | [View SQL](./LEET-23-Number-of-Unique-Subjects-Taught-by-Each-Teacher.sql) |
+| 24 | Daily Active User Count | [View SQL](./LEET-24-Daily-Active-User-Count.sql) |
+| 25 | First Year Sales | [View SQL](./LEET-25-First-Year-Sales.sql) |
+| 26 | Classes More Than 5 Students | [View SQL](./LEET-26-classes-more-than-5-students.sql) |
+| 27 | Find Followers Count | [View SQL](./LEET-27-find-followers-count.sql) |
+| 28 | Biggest Single Number | [View SQL](./LEET-28-biggest-single-number.sql) |
+| 29 | Customers Who Bought All Products | [View SQL](./LEET-29-customers-who-bought-all-products.sql) |
+| 30 | Employee Reports | [View SQL](./LEET-30-employee-reports.sql) |
+| 31 | Primary Department for Each Employee | [View SQL](./LEET-31-primary-department-for-each-employee.sql) |
+| 32 | Valid Triangle | [View SQL](./LEET-32-valid-triangle.sql) |
+| 33 | Consecutive Numbers | [View SQL](./LEET-33-consecutive-numbers.sql) |
+| 34 | Product Price at a Given Date | [View SQL](./LEET-34-product-price-at-a-given-date.sql) |
+| 35 | Last Person to Fit in the Bus | [View SQL](./LEET-35-last-person-to-fit-in-the-bus.sql) |
+| 36 | Count Salary Categories | [View SQL](./LEET-36-count-salary-categories.sql) |
+| 37 | Employees Whose Manager Left the Company | [View SQL](./LEET-37-employees-whose-manager-left-the-company.sql) |
+| 38 | Exchange Seats | [View SQL](./LEET-38-exchange-seats.sql) |
+| 39 | Movie Rating | [View SQL](./LEET-39-movie-rating.sql) |
+| 40 | Restaurant Growth | [View SQL](./LEET-40-restaurant-growth.sql) |
+| 41 | Friend Requests II: Who Has the Most Friends | [View SQL](./LEET-41-friend-requests-ii-who-has-the-most-friends.sql) |
 
-- Each solution is stored in a separate SQL file.
-- The repository uses SQL Server and T-SQL syntax.
-- Solutions focus on the required problem logic and relevant SQL concepts.
-- The problem list is intentionally selected rather than a complete copy of all LeetCode SQL problems.
-- Problem numbering follows the repository's file naming convention; the missing number 13 is intentional.
+## 🧠 SQL Concepts Practiced
 
-## 🚀 Roadmap
+### Query Fundamentals
+- `SELECT`, `WHERE`, `ORDER BY`, `DISTINCT`, and `TOP`
+- Filtering and sorting
+- Aliases and conditional logic with `CASE`
 
-- [x] Complete the first 41 selected SQL problems.
-- [ ] Solve the remaining 9 selected problems.
-- [ ] Review and consolidate recurring SQL patterns.
-- [ ] Practice explaining the logic behind each solution.
-- [ ] Continue applying SQL concepts to Data Engineering projects.
+### Joins and Relationships
+- `INNER JOIN`
+- `LEFT JOIN`
+- Self joins
+- Understanding relationships between tables
 
-## 🛠️ Technologies
+### Aggregation
+- `COUNT()`, `SUM()`, `AVG()`, `MIN()`, and `MAX()`
+- `GROUP BY`
+- `HAVING`
+- Conditional aggregation
 
-- Microsoft SQL Server
-- T-SQL
-- LeetCode SQL problems
-- Git and GitHub
+### Subqueries and CTEs
+- Scalar subqueries
+- Multi-row subqueries
+- Correlated subqueries
+- Common Table Expressions (CTEs)
+- `EXISTS` and `NOT EXISTS`
 
-## 📌 Disclaimer
+### Analytical SQL
+- Window functions
+- `PARTITION BY`
+- `ROW_NUMBER()`
+- `RANK()`
+- `LAG()`
+- Running totals and ranking patterns
 
-This repository is a personal learning project documenting practical SQL problem-solving. The solutions are intended to demonstrate SQL concepts and analytical thinking relevant to Data Engineering.
+### Data Quality and Edge Cases
+- NULL handling
+- Duplicate detection
+- Date-based filtering
+- Identifying missing relationships
+- Consecutive records and sequence analysis
+- Handling requirements involving *all*, *only*, *no*, *latest*, and *at least*
+
+## 🔧 Tools and Technologies
+
+- **Language:** SQL / T-SQL
+- **Database:** Microsoft SQL Server
+- **Query Environment:** SQL Server Management Studio (SSMS)
+- **Version Control:** Git and GitHub
+- **Practice:** LeetCode SQL problems and practical SQL exercises
+
+## 🚀 Relevance to Data Engineering
+
+These exercises help build the SQL foundation needed for common Data Engineering tasks, including:
+
+- Extracting and filtering data from relational databases.
+- Transforming data using joins and aggregations.
+- Validating records and identifying data-quality issues.
+- Understanding table relationships and analytical requirements.
+- Preparing data for reporting and downstream processing.
+- Developing reliable query logic before applying it in ETL/ELT pipelines.
+
+This repository is part of my broader learning journey toward becoming a **Junior Data Engineer**, alongside Python, data pipelines, data warehousing, and Microsoft Azure.
+
+## 📈 Learning Approach
+
+For each problem, the goal is to:
+
+1. Understand the problem statement and expected output.
+2. Identify the relevant tables, relationships, and constraints.
+3. Develop a logical solution before writing the query.
+4. Consider duplicates, NULLs, and boundary conditions.
+5. Test the query and document the solution.
+6. Track progress through GitHub.
+
+## 👨‍💻 Author
+
+**Ahmed Ibrahim**
+
+Aspiring Data Engineer | DEPI Microsoft Data Engineer Trainee | Python · SQL · Azure | Alexandria University
+
+- **GitHub:** [ahmed-ibrahim-EG](https://github.com/ahmed-ibrahim-EG)
+- **LinkedIn:** [Ahmed Ibrahim](https://www.linkedin.com/)
 
 ---
 
 <div align="center">
 
-**41 / 50 • 82% Complete**
+*Learning consistently, solving practical problems, and building toward Data Engineering.*
 
-*Building practical SQL foundations for Data Engineering, one problem at a time.*
+**41/50 problems completed — 82%**
 
 </div>
