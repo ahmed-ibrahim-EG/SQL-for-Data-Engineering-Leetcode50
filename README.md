@@ -14,8 +14,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/SQL%20Server-T--SQL-red?style=for-the-badge&logo=microsoftsqlserver" alt="SQL Server">
-  <img src="https://img.shields.io/badge/LeetCode-40%20%2F%2050-orange?style=for-the-badge&logo=leetcode" alt="LeetCode Progress">
-  <img src="https://img.shields.io/badge/Progress-80%25-brightgreen?style=for-the-badge" alt="Progress">
+  <img src="https://img.shields.io/badge/LeetCode-41%20%2F%2050-orange?style=for-the-badge&logo=leetcode" alt="LeetCode Progress">
+  <img src="https://img.shields.io/badge/Progress-82%25-brightgreen?style=for-the-badge" alt="Progress">
 </p>
 
 </div>
@@ -79,10 +79,12 @@ SQL-for-Data-Engineering-Lab/
 ├── LEET-37-employees-whose-manager-left-the-company.sql
 ├── LEET-38-exchange-seats.sql
 ├── LEET-39-movie-rating.sql
-└── LEET-40-friend-requests-ii-who-has-the-most-friends.sql
+├── LEET-40-friend-requests-ii-who-has-the-most-friends.sql
+└── LEET-41-investment-in-2016.sql
 ```
 
 Each SQL file contains:
+
 - Problem title and LeetCode reference
 - Problem statement
 - Table schema
@@ -92,10 +94,10 @@ The solutions are written independently so that each file can be reviewed and pr
 
 ## 📊 Progress
 
-**40 / 50 problems completed — 80%**
+**41 / 50 problems completed — 82%**
 
 ```text
-Progress: █████████████████████████████████████████░░░░░░░░░░ 80%
+Progress: █████████████████████████████████████████░░░░░░░░░ 82%
 ```
 
 ### Problem Tracking
@@ -141,6 +143,7 @@ Progress: ███████████████████████�
 | 38 | Exchange Seats | CASE, Conditional Logic | 🟡 Medium | [View SQL](./LEET-38-exchange-seats.sql) |
 | 39 | Movie Rating | CTEs, Aggregation, Date Filtering & UNION ALL | 🟡 Medium | [View SQL](./LEET-39-movie-rating.sql) |
 | 40 | Friend Requests II: Who Has the Most Friends | UNION ALL, Aggregation, GROUP BY & MAX | 🟡 Medium | [View SQL](./LEET-40-friend-requests-ii-who-has-the-most-friends.sql) |
+| 41 | Investments in 2016 | Aggregation, `GROUP BY`, `HAVING`, Conditional Filtering | 🟡 Medium | [View SQL](./LEET-41-investment-in-2016.sql) |
 
 ## 📝 Engineering Notes
 
@@ -152,8 +155,8 @@ Progress: ███████████████████████�
 
 ## 🚀 Roadmap
 
-- [x] Complete the first 40 selected SQL problems.
-- [ ] Solve the remaining 10 selected problems.
+- [x] Complete the first 41 selected SQL problems.
+- [ ] Solve the remaining 9 selected problems.
 - [ ] Review and consolidate recurring SQL patterns.
 - [ ] Practice explaining the logic behind each solution.
 - [ ] Continue applying SQL concepts to Data Engineering projects.
@@ -173,7 +176,7 @@ This repository is a personal learning project documenting practical SQL problem
 
 <div align="center">
 
-**40 / 50 • 80% Complete**
+**41 / 50 • 82% Complete**
 
 *Building practical SQL foundations for Data Engineering, one problem at a time.*
 
