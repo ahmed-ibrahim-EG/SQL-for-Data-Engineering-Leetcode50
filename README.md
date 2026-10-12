@@ -7,7 +7,7 @@
 <p>
   <img src="https://img.shields.io/badge/SQL-Server-blue?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server" />
   <img src="https://img.shields.io/badge/LeetCode-Practice-orange?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode" />
-  <img src="https://img.shields.io/badge/Progress-41%2F50-success?style=for-the-badge" alt="Progress" />
+  <img src="https://img.shields.io/badge/Progress-45%2F50-success?style=for-the-badge" alt="Progress" />
 </p>
 
 **A structured collection of SQL solutions focused on analytical thinking, query logic, and practical Data Engineering patterns.**
@@ -37,20 +37,24 @@ The goal is to develop strong SQL fundamentals, improve analytical problem-solvi
 - Build a consistent, documented SQL portfolio.
 - Apply SQL concepts to real-world Data Engineering scenarios.
 
+---
+
 ## 📊 Progress
 
 | Metric | Status |
 |---|---:|
-| Completed Problems | 41 |
+| Completed Problems | 45 |
 | Target Problems | 50 |
-| Completion Rate | 82% |
-| Remaining Problems | 9 |
+| Completion Rate | 90% |
+| Remaining Problems | 5 |
 | Database | Microsoft SQL Server |
 | Query Language | T-SQL |
 
+---
+
 ## 🗂️ SQL Solutions
 
-Difficulty labels are based on the standard LeetCode classification where identifiable. Some entries are marked **Medium (estimated)** or **Easy (estimated)** when the provided filename does not uniquely identify the original problem.
+> Difficulty labels are based on the standard LeetCode classification where identifiable. Some entries are marked **Medium (estimated)** or **Easy (estimated)** when the provided filename does not uniquely identify the original problem.
 
 | # | Problem | Difficulty | SQL Solution |
 |---:|---|---|---|
@@ -95,32 +99,43 @@ Difficulty labels are based on the standard LeetCode classification where identi
 | 39 | Movie Rating | Medium | [View SQL](./LEET-39-movie-rating.sql) |
 | 40 | Restaurant Growth | Hard | [View SQL](./LEET-40-restaurant-growth.sql) |
 | 41 | Friend Requests II: Who Has the Most Friends | Medium | [View SQL](./LEET-41-friend-requests-ii-who-has-the-most-friends.sql) |
+| 42 | Investments in 2016 | Medium | [View SQL](./LEET-42-investments-in-2016.sql) |
+| 43 | Department Top Three Salaries | Hard | [View SQL](./LEET-43-department-top-three-salaries.sql) |
+| 44 | Fix Names in a Table | Easy | [View SQL](./LEET-44-fix-names-in-a-table.sql) |
+| 45 | Patients With a Condition | Easy | [View SQL](./LEET-45-patients-with-a-condition.sql) |
+
+---
 
 ## 🧠 SQL Concepts Practiced
 
-### Query Fundamentals
+### 🔹 Query Fundamentals
+
 - `SELECT`, `WHERE`, `ORDER BY`, `DISTINCT`, `TOP`
 - Filtering, sorting, and aliases
 - Conditional logic with `CASE`
 
-### Joins and Relationships
+### 🔗 Joins and Relationships
+
 - `INNER JOIN`
 - `LEFT JOIN`
 - Self joins
 - Table relationships and missing matches
 
-### Aggregation
+### ➕ Aggregation
+
 - `COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()`
 - `GROUP BY` and `HAVING`
 - Conditional aggregation
 
-### Subqueries and CTEs
+### 🧩 Subqueries and CTEs
+
 - Scalar and multi-row subqueries
 - Correlated subqueries
 - Common Table Expressions (CTEs)
 - `EXISTS` and `NOT EXISTS`
 
-### Analytical SQL
+### 📈 Analytical SQL
+
 - Window functions
 - `PARTITION BY`
 - `ROW_NUMBER()`
@@ -128,13 +143,16 @@ Difficulty labels are based on the standard LeetCode classification where identi
 - `LAG()`
 - Running totals and ranking patterns
 
-### Data Quality and Edge Cases
+### 🧹 Data Quality and Edge Cases
+
 - NULL handling
 - Duplicate detection
 - Date-based filtering
 - Missing relationships
 - Consecutive records and sequence analysis
 - Requirements involving *all*, *only*, *no*, *latest*, and *at least*
+
+---
 
 ## 🛠️ Tools and Technologies
 
@@ -143,6 +161,8 @@ Difficulty labels are based on the standard LeetCode classification where identi
 - **Query Environment:** SQL Server Management Studio (SSMS)
 - **Version Control:** Git and GitHub
 - **Practice Platform:** LeetCode
+
+---
 
 ## 🚀 Relevance to Data Engineering
 
@@ -157,6 +177,8 @@ SQL is a core skill in Data Engineering. This repository helps build the foundat
 
 This repository is part of my broader learning journey toward becoming a **Junior Data Engineer**, alongside Python, data pipelines, data warehousing, and Microsoft Azure.
 
+---
+
 ## 📈 Learning Approach
 
 1. Understand the requirements and expected output.
@@ -165,6 +187,8 @@ This repository is part of my broader learning journey toward becoming a **Junio
 4. Consider NULLs, duplicates, and boundary conditions.
 5. Test and document each solution.
 6. Track progress using Git and GitHub.
+
+---
 
 ## 👨‍💻 Author
 
@@ -183,7 +207,7 @@ Aspiring Data Engineer | DEPI Microsoft Data Engineer Trainee | Python · SQL ·
 
 `SQL` `T-SQL` `SQL-Server` `LeetCode` `Data-Engineering` `Data-Analytics` `Database` `Query-Optimization` `Problem-Solving` `ETL` `ELT` `Data-Transformation` `GitHub`
 
-**41/50 Problems Completed — 82%**
+**45/50 Problems Completed — 90%**
 
 *Learning consistently. Solving practical problems. Building toward Data Engineering.*
 
