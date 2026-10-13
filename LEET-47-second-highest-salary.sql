@@ -25,4 +25,15 @@ Schema:
 */
 
 -- Verified Solution Query:
--- Write your solution here.
+WITH RankedSalaries AS (
+    SELECT
+        salary,
+        DENSE_RANK() OVER (
+            ORDER BY salary DESC
+        ) AS SalaryRank
+    FROM Employee
+)
+SELECT
+    MAX(CASE WHEN SalaryRank = 2 THEN salary END)
+        AS SecondHighestSalary
+FROM RankedSalaries;
