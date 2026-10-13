@@ -2,62 +2,69 @@
 
 # ⚡ SQL for Data Engineering Lab
 
-### *Practical SQL Problem Solving for Data Engineering*
+### Practical T-SQL Problem Solving & Query Patterns for Data Engineering
 
 <p>
-  <img src="https://img.shields.io/badge/SQL-Server-blue?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server" />
-  <img src="https://img.shields.io/badge/LeetCode-Practice-orange?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode" />
-  <img src="https://img.shields.io/badge/Progress-45%2F50-success?style=for-the-badge" alt="Progress" />
+  <img src="https://img.shields.io/badge/Database-Microsoft_SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="Microsoft SQL Server" />
+  <img src="https://img.shields.io/badge/Language-T--SQL-0078D4?style=for-the-badge&logo=microsoft&logoColor=white" alt="T-SQL" />
+  <img src="https://img.shields.io/badge/Platform-LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Practice" />
+  <img src="https://img.shields.io/badge/Solved-50%2F50_(100%25)-2EA043?style=for-the-badge" alt="Progress 50 of 50" />
 </p>
 
-**A structured collection of SQL solutions focused on analytical thinking, query logic, and practical Data Engineering patterns.**
+<p>
+  <strong>A structured repository of 50 T-SQL solutions focused on relational query logic, analytical SQL, data validation, and foundational Data Engineering patterns.</strong>
+</p>
 
-[Overview](#-overview) •
-[Progress](#-progress) •
-[SQL Solutions](#-sql-solutions) •
-[Concepts](#-sql-concepts-practiced) •
-[Author](#-author)
+<p>
+  <a href="#-repository-overview">Overview</a> •
+  <a href="#-progress-dashboard">Progress</a> •
+  <a href="#-sql-solutions">SQL Solutions</a> •
+  <a href="#-sql-concepts-practiced">SQL Concepts</a> •
+  <a href="#-tools-and-technologies">Tech Stack</a> •
+  <a href="#-relevance-to-data-engineering">DE Relevance</a> •
+  <a href="#-problem-solving-workflow">Workflow</a> •
+  <a href="#-author-and-contact">Author</a>
+</p>
 
 </div>
 
 ---
 
-## 📌 Overview
+## 📌 Repository Overview
 
-This repository documents my progress in SQL through practical coding problems and structured solutions using **Microsoft SQL Server (T-SQL)**.
+**SQL for Data Engineering Lab** is a hands-on learning repository documenting 50 solved relational database problems implemented in **Microsoft SQL Server (T-SQL)**.
 
-The goal is to develop strong SQL fundamentals, improve analytical problem-solving, and build the foundation required for data transformation, data quality, and ETL/ELT pipelines.
+Rather than treating SQL challenges as isolated puzzles, this lab approaches each problem as a practical data transformation or validation task. The focus is on writing clear, maintainable T-SQL queries that accurately handle joins, aggregations, window functions, relational edge cases, and data-quality constraints.
 
-### 🎯 Objectives
+### 🎯 Core Objectives
 
-- Strengthen SQL fundamentals and query-writing skills.
-- Practice joins, aggregations, subqueries, and window functions.
-- Improve logical thinking and problem decomposition.
-- Handle NULL values, duplicates, and edge cases correctly.
-- Build a consistent, documented SQL portfolio.
-- Apply SQL concepts to real-world Data Engineering scenarios.
+- **Master T-SQL Fundamentals:** Build fluency in writing clean, readable queries using Microsoft SQL Server syntax.
+- **Solve Analytical Problems:** Apply multi-table joins, aggregations, subqueries, CTEs, and window functions to answer complex business questions.
+- **Handle Real-World Edge Cases:** Account for `NULL` values, duplicate records, missing foreign-key relationships, and boundary conditions.
+- **Develop ETL/ELT Query Logic:** Practice the core relational patterns used to extract, clean, deduplicate, and aggregate data in downstream pipelines.
+- **Maintain a Documented Portfolio:** Track consistent problem-solving progress using structured Git version control.
 
 ---
 
-## 📊 Progress
+## 📊 Progress Dashboard
 
-| Metric | Status |
-|---|---:|
-| Completed Problems | 45 |
-| Target Problems | 50 |
-| Completion Rate | 90% |
-| Remaining Problems | 5 |
-| Database | Microsoft SQL Server |
-| Query Language | T-SQL |
+| Metric | Details |
+| :--- | :--- |
+| **Completed Problems** | `50 / 50` |
+| **Completion Rate** | `100%` ![100%](https://geps.dev/progress/100) |
+| **Difficulty Breakdown** | 32 Easy *(incl. 1 estimated)* · 16 Medium · 2 Hard |
+| **Database Engine** | Microsoft SQL Server |
+| **Query Dialect** | Transact-SQL (T-SQL) |
+| **Practice Source** | LeetCode Database Problems |
 
 ---
 
 ## 🗂️ SQL Solutions
 
-> Difficulty labels are based on the standard LeetCode classification where identifiable. Some entries are marked **Medium (estimated)** or **Easy (estimated)** when the provided filename does not uniquely identify the original problem.
+> **Note on Classifications:** Difficulty labels follow standard LeetCode classifications where directly mapped. Entry `#04` is marked `Easy (estimated)` where the local filename does not uniquely distinguish the original problem prompt.
 
-| # | Problem | Difficulty | SQL Solution |
-|---:|---|---|---|
+| # | Problem Title | Difficulty | Solution File |
+| :---: | :--- | :---: | :---: |
 | 01 | Recyclable and Low Fat Products | Easy | [View SQL](./LEET-01-recyclable-and-low-fat-products.sql) |
 | 02 | Find Customer Referee | Easy | [View SQL](./LEET-02-find-customer-referee.sql) |
 | 03 | Big Countries | Easy | [View SQL](./LEET-03-Big%20-Countries.sql) |
@@ -103,100 +110,104 @@ The goal is to develop strong SQL fundamentals, improve analytical problem-solvi
 | 43 | Department Top Three Salaries | Hard | [View SQL](./LEET-43-department-top-three-salaries.sql) |
 | 44 | Fix Names in a Table | Easy | [View SQL](./LEET-44-fix-names-in-a-table.sql) |
 | 45 | Patients With a Condition | Easy | [View SQL](./LEET-45-patients-with-a-condition.sql) |
+| 46 | Second Highest Salary | Medium | [View SQL](./LEET-46-second-highest-salary.sql) |
+| 47 | Group Sold Products By The Date | Easy | [View SQL](./LEET-47-group-sold-products-by-the-date.sql) |
+| 48 | Product Sales Analysis III | Easy | [View SQL](./LEET-48-product-sales-analysis-iii.sql) |
+| 49 | Product Sales Analysis II | Easy | [View SQL](./LEET-49-product-sales-analysis-ii.sql) |
+| 50 | Find Users With Valid E-Mails | Easy | [View SQL](./LEET-50-find-users-with-valid-e-mails.sql) |
 
 ---
 
 ## 🧠 SQL Concepts Practiced
 
-### 🔹 Query Fundamentals
+The solutions in this repository cover core relational and analytical concepts organized into seven practical areas:
 
-- `SELECT`, `WHERE`, `ORDER BY`, `DISTINCT`, `TOP`
-- Filtering, sorting, and aliases
-- Conditional logic with `CASE`
+### 1. Query Fundamentals
+- Core clauses: `SELECT`, `WHERE`, `ORDER BY`, `DISTINCT`, and `TOP`
+- Column/table aliasing and result formatting
+- Conditional branching and categorization using `CASE WHEN`
 
-### 🔗 Joins and Relationships
+### 2. Joins and Relationships
+- Combining related tables with `INNER JOIN` and `LEFT JOIN`
+- Using self-joins for hierarchical and sequential comparisons (e.g., manager-employee relationships, day-over-day comparisons)
+- Detecting orphaned or unmatched records via anti-join patterns (`LEFT JOIN ... WHERE key IS NULL`)
 
-- `INNER JOIN`
-- `LEFT JOIN`
-- Self joins
-- Table relationships and missing matches
+### 3. Aggregation and Grouping
+- Standard aggregate functions: `COUNT()`, `SUM()`, `AVG()`, `MIN()`, and `MAX()`
+- Grouping records with `GROUP BY` and filtering aggregated groups with `HAVING`
+- Conditional aggregation (combining `SUM()` or `AVG()` with `CASE WHEN` for rate and percentage metrics)
+- Concatenating grouped text values using `STRING_AGG()`
 
-### ➕ Aggregation
+### 4. Subqueries and CTEs
+- Scalar and multi-row subqueries in `SELECT`, `FROM`, and `WHERE` clauses
+- Correlated subqueries for row-by-row contextual evaluation
+- Modularizing multi-step transformations using Common Table Expressions (`WITH` / CTEs)
+- Checking record existence efficiently with `EXISTS` and `NOT EXISTS`
 
-- `COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()`
-- `GROUP BY` and `HAVING`
-- Conditional aggregation
+### 5. Window Functions and Analytical SQL
+- Partitioning and ordering datasets with `OVER (PARTITION BY ... ORDER BY ...)`
+- Deduping and identifying top-N records per group with `ROW_NUMBER()`, `RANK()`, and `DENSE_RANK()`
+- Accessing prior or subsequent rows for sequence and trend analysis using `LAG()`
+- Calculating cumulative sums, moving averages, and running totals
 
-### 🧩 Subqueries and CTEs
+### 6. Data Quality and Edge Cases
+- Safe `NULL` handling in comparisons, joins, and arithmetic calculations
+- Duplicate detection and primary/unique record isolation
+- Identifying missing relationships (e.g., employees whose managers left the company)
+- Evaluating consecutive sequences and relational division queries (*"all"*, *"only"*, *"at least"*, *"latest"*)
 
-- Scalar and multi-row subqueries
-- Correlated subqueries
-- Common Table Expressions (CTEs)
-- `EXISTS` and `NOT EXISTS`
-
-### 📈 Analytical SQL
-
-- Window functions
-- `PARTITION BY`
-- `ROW_NUMBER()`
-- `RANK()`
-- `LAG()`
-- Running totals and ranking patterns
-
-### 🧹 Data Quality and Edge Cases
-
-- NULL handling
-- Duplicate detection
-- Date-based filtering
-- Missing relationships
-- Consecutive records and sequence analysis
-- Requirements involving *all*, *only*, *no*, *latest*, and *at least*
+### 7. String Matching and Date Filtering
+- Standardizing text capitalization and substrings (e.g., fixing name formatting, measuring tweet length)
+- Validating structured text patterns such as email addresses and medical condition codes using `LIKE` and pattern matching
+- Filtering and aggregating records across date boundaries, intervals, and monthly periods
 
 ---
 
 ## 🛠️ Tools and Technologies
 
-- **SQL:** T-SQL
-- **Database:** Microsoft SQL Server
-- **Query Environment:** SQL Server Management Studio (SSMS)
-- **Version Control:** Git and GitHub
-- **Practice Platform:** LeetCode
+| Category | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Query Language** | T-SQL (Transact-SQL) | Writing relational queries, CTEs, and analytical logic |
+| **Database Engine** | Microsoft SQL Server | Executing and validating SQL solutions |
+| **Development IDE** | SQL Server Management Studio (SSMS) | Local query authoring, testing, and debugging |
+| **Version Control** | Git & GitHub | Tracking solution history and maintaining documentation |
+| **Practice Platform** | LeetCode | Source of relational database problem statements and test cases |
 
 ---
 
-## 🚀 Relevance to Data Engineering
+## 🏗️ Relevance to Data Engineering
 
-SQL is a core skill in Data Engineering. This repository helps build the foundation for:
+Strong SQL proficiency is a foundational requirement for Data Engineering. While this repository focuses on problem-solving exercises, the patterns practiced directly support day-to-day engineering workflows:
 
-- Extracting and filtering data from relational databases.
-- Transforming data through joins and aggregations.
-- Validating records and identifying data-quality issues.
-- Understanding analytical requirements and table relationships.
-- Preparing datasets for reporting and downstream processing.
-- Developing query logic for ETL/ELT workflows.
+- **Data Extraction & Filtering:** Writing precise predicates and join conditions to pull only the required records from operational source tables.
+- **Data Transformation & Enrichment:** Reshaping raw tables into structured outputs through multi-step CTEs, conditional logic, and date/string standardization.
+- **Deduplication & Grain Control:** Using window functions (`ROW_NUMBER()`, `DENSE_RANK()`) and grouping logic to enforce table grain and isolate the latest state of a record.
+- **Data Quality & Validation:** Identifying broken foreign keys, handling `NULL` values explicitly, and verifying completeness rules before loading downstream tables.
+- **ETL/ELT Pipeline Preparation:** Building the core SQL transformation logic used inside staging layers, dimensional models, and analytical views.
 
-This repository is part of my broader learning journey toward becoming a **Junior Data Engineer**, alongside Python, data pipelines, data warehousing, and Microsoft Azure.
-
----
-
-## 📈 Learning Approach
-
-1. Understand the requirements and expected output.
-2. Identify the relevant tables, relationships, and constraints.
-3. Develop the solution logic before writing the query.
-4. Consider NULLs, duplicates, and boundary conditions.
-5. Test and document each solution.
-6. Track progress using Git and GitHub.
+This lab is part of my broader preparation for a **Junior Data Engineer / Data Engineering Intern** role, alongside hands-on study in **Python**, **Data Pipelines**, **Data Warehousing**, and **Microsoft Azure**.
 
 ---
 
-## 👨‍💻 Author
+## 🔄 Problem-Solving Workflow
 
-**Ahmed Ibrahim**
+Every solution in this repository follows a structured engineering approach:
 
-Aspiring Data Engineer | DEPI Microsoft Data Engineer Trainee | Python · SQL · Azure | Alexandria University
+1. **Analyze Requirements:** Review the business question, expected output schema, and sorting rules.
+2. **Inspect the Data Model:** Identify primary keys, foreign-key relationships, table grain, and potential one-to-many fan-out risks.
+3. **Design the Query Plan:** Break the transformation into logical steps (filtering, joining, grouping, or windowing) before writing code.
+4. **Account for Edge Cases:** Explicitly handle `NULL` values, ties in ranking, empty result sets, division-by-zero risks, and duplicate rows.
+5. **Implement & Verify in T-SQL:** Write clean, readable T-SQL and validate results against boundary test cases.
+6. **Document & Commit:** Save the verified script with consistent naming and track progress in GitHub.
 
-- **GitHub:** [ahmed-ibrahim-EG](https://github.com/ahmed-ibrahim-EG)
+---
+
+## 👨‍💻 Author and Contact
+
+**Ahmed Ibrahim**  
+*Aspiring Data Engineer | DEPI Microsoft Data Engineer Trainee | Python · SQL · Azure | Alexandria University*
+
+- **GitHub:** [@ahmed-ibrahim-EG](https://github.com/ahmed-ibrahim-EG)
 - **LinkedIn:** [Ahmed Ibrahim](https://www.linkedin.com/)
 
 ---
@@ -205,10 +216,11 @@ Aspiring Data Engineer | DEPI Microsoft Data Engineer Trainee | Python · SQL ·
 
 ### 🏷️ Topics
 
-`SQL` `T-SQL` `SQL-Server` `LeetCode` `Data-Engineering` `Data-Analytics` `Database` `Query-Optimization` `Problem-Solving` `ETL` `ELT` `Data-Transformation` `GitHub`
+`SQL` · `T-SQL` · `SQL-Server` · `LeetCode` · `Data-Engineering` · `Data-Analytics` · `Database` · `Query-Optimization` · `Problem-Solving` · `ETL` · `ELT` · `Data-Transformation` · `GitHub`
 
-**45/50 Problems Completed — 90%**
+<br />
 
-*Learning consistently. Solving practical problems. Building toward Data Engineering.*
+**50 / 50 Problems Completed (100%)**  
+*Building a strong SQL foundation for Data Engineering through consistent, practical problem-solving.*
 
 </div>
